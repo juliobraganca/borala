@@ -56,15 +56,31 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				D63023952ABBC3CC001092C1 /* Register */,
+				D63023942ABBC3B0001092C1 /* Login */,
 				367458BB2A965AB9008E77D8 /* AppDelegate.swift */,
 				367458BD2A965AB9008E77D8 /* SceneDelegate.swift */,
 				367458BF2A965AB9008E77D8 /* ViewController.swift */,
-				367458C12A965AB9008E77D8 /* Main.storyboard */,
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
 				367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */,
 				367458C92A965ABA008E77D8 /* Info.plist */,
 			);
 			path = borala;
+			sourceTree = "<group>";
+		};
+		D63023942ABBC3B0001092C1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				367458C12A965AB9008E77D8 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D63023952ABBC3CC001092C1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
