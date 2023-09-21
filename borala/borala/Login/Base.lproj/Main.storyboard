@@ -41,12 +41,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ag-t3-jNs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ag-t3-jNs">
                                 <rect key="frame" x="30" y="535" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-Zl-mgh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-Zl-mgh">
                                 <rect key="frame" x="288" y="535" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Button"/>
@@ -70,15 +70,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IuX-2P-clD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="2OY-HY-S6n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWO-Zl-mgh" secondAttribute="trailing" constant="30" id="5Kg-7D-V9W"/>
                             <constraint firstAttribute="bottom" secondItem="Uqq-ur-9Dx" secondAttribute="bottom" id="6wu-tA-YOG"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="88Y-8Z-EGq"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="top" secondItem="vWO-Zl-mgh" secondAttribute="bottom" constant="17" id="8X9-3H-ciR"/>
                             <constraint firstItem="0ag-t3-jNs" firstAttribute="top" secondItem="zJk-b9-wMn" secondAttribute="bottom" constant="8" symbolic="YES" id="8bX-Ll-95P"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="top" secondItem="zJk-b9-wMn" secondAttribute="bottom" constant="60" id="A1p-Nc-pxE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuN-22-eAF" secondAttribute="trailing" constant="30" id="BpZ-LB-27T"/>
+                            <constraint firstItem="vWO-Zl-mgh" firstAttribute="leading" secondItem="0ag-t3-jNs" secondAttribute="trailing" constant="183" id="F3Y-AN-7qj"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="top" secondItem="0ag-t3-jNs" secondAttribute="bottom" constant="17" id="Fe2-BN-BQT"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HGU-0W-US9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vWO-Zl-mgh" secondAttribute="trailing" constant="30" id="JZW-v7-Krt"/>
                             <constraint firstItem="0ag-t3-jNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="K6F-rb-cOt"/>
                             <constraint firstItem="sfE-r2-TCa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LvC-ee-Psn"/>
                             <constraint firstItem="vWO-Zl-mgh" firstAttribute="top" secondItem="zJk-b9-wMn" secondAttribute="bottom" constant="8" symbolic="YES" id="MUP-Bw-6Uq"/>
