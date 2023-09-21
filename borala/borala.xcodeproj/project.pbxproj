@@ -14,6 +14,9 @@
 		367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367458C42A965ABA008E77D8 /* Assets.xcassets */; };
 		367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */; };
 		C72647662ABC7CAB0001C0EB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72647652ABC7CAB0001C0EB /* MapViewController.swift */; };
+		C72647692ABC9EE70001C0EB /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72647682ABC9EE70001C0EB /* AddCityViewController.swift */; };
+		C726476B2ABC9EF30001C0EB /* AddCityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C726476A2ABC9EF30001C0EB /* AddCityViewController.storyboard */; };
+		C726476D2ABCA8EF0001C0EB /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C726476C2ABCA8EF0001C0EB /* CitiesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		367458C72A965ABA008E77D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367458C92A965ABA008E77D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72647652ABC7CAB0001C0EB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C72647682ABC9EE70001C0EB /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
+		C726476A2ABC9EF30001C0EB /* AddCityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCityViewController.storyboard; sourceTree = "<group>"; };
+		C726476C2ABCA8EF0001C0EB /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				C72647672ABC9EC20001C0EB /* AddCity */,
 				C7723FCE2ABA48F20028F739 /* Maps */,
 				367458BB2A965AB9008E77D8 /* AppDelegate.swift */,
 				367458BD2A965AB9008E77D8 /* SceneDelegate.swift */,
@@ -66,8 +73,18 @@
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
 				367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */,
 				367458C92A965ABA008E77D8 /* Info.plist */,
+				C726476C2ABCA8EF0001C0EB /* CitiesCollectionViewCell.swift */,
 			);
 			path = borala;
+			sourceTree = "<group>";
+		};
+		C72647672ABC9EC20001C0EB /* AddCity */ = {
+			isa = PBXGroup;
+			children = (
+				C72647682ABC9EE70001C0EB /* AddCityViewController.swift */,
+				C726476A2ABC9EF30001C0EB /* AddCityViewController.storyboard */,
+			);
+			path = AddCity;
 			sourceTree = "<group>";
 		};
 		C7723FCE2ABA48F20028F739 /* Maps */ = {
@@ -136,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C726476B2ABC9EF30001C0EB /* AddCityViewController.storyboard in Resources */,
 				367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */,
 				367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
@@ -149,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72647692ABC9EE70001C0EB /* AddCityViewController.swift in Sources */,
 				367458C02A965AB9008E77D8 /* ViewController.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
+				C726476D2ABCA8EF0001C0EB /* CitiesCollectionViewCell.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
 				C72647662ABC7CAB0001C0EB /* MapViewController.swift in Sources */,
 			);
@@ -307,7 +327,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +359,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
