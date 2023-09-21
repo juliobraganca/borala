@@ -17,6 +17,7 @@
 		363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */; };
 		363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */; };
 		363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */; };
+		363EBA692ABCEE68004AF499 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA682ABCEE68004AF499 /* Places.swift */; };
 		367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BB2A965AB9008E77D8 /* AppDelegate.swift */; };
 		367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BD2A965AB9008E77D8 /* SceneDelegate.swift */; };
 		367458C02A965AB9008E77D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BF2A965AB9008E77D8 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
 		363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		363EBA682ABCEE68004AF499 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		367458B82A965AB9008E77D8 /* borala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = borala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367458BB2A965AB9008E77D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367458BD2A965AB9008E77D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		363EBA672ABCEE5E004AF499 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA682ABCEE68004AF499 /* Places.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		367458AF2A965AB9008E77D8 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				363EBA672ABCEE5E004AF499 /* Model */,
 				363EBA512ABC7E43004AF499 /* Utilities */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
 				363EBA432ABC78DF004AF499 /* ForgotPassword */,
@@ -219,6 +230,7 @@
 				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
+				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
 				363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */,
 			);
