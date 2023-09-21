@@ -14,19 +14,20 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPlanButton: UIButton!
     
-//    var places: [String: String] = ["Chile": "Chile",
-//                                   "Bali": "Bali",
-//                                   "Rio de Janeiro": "RJ",
-//                                   "Paris": "paris",
-//                                   "Africa do Sul": "southAfrica",
-//                                   "Sydney": "sydney",
-//                                   "Maceió": "maceio",
-//                                   "Ouro Preto": "ouroPreto",
-//                                   "Florianópolis": "floripa",
-//                                   "Bonito": "BonitoMS",
-//                                   "Gramado": "gramado"]
     
-    var places: [String] = ["Chile", "Bali", "RJ", "paris", "southAfrica", "sydney", "maceio", "ouroPreto", "floripa", "BonitoMS", "gramado"]
+    var places: [Places] = [Places(placeName: "Chile", nameImage: "Chile"),
+                            Places(placeName: "Bali", nameImage: "Bali"),
+                            Places(placeName: "Rio de Janeiro", nameImage: "RJ"),
+                            Places(placeName: "Paris", nameImage: "paris"),
+                            Places(placeName: "Africa do Sul", nameImage: "southAfrica"),
+                            Places(placeName: "Sydney", nameImage: "sydney"),
+                            Places(placeName: "Maceió", nameImage: "maceio"),
+                            Places(placeName: "Ouro Preto", nameImage: "ouroPreto"),
+                            Places(placeName: "Florianópolis", nameImage: "floripa"),
+                            Places(placeName: "Bonito", nameImage: "BonitoMS"),
+                            Places(placeName: "Gramado", nameImage: "gramado"),
+    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,13 +75,15 @@ class HomeVC: UIViewController {
 
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return places.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell
-        cell?.setupCell(nameImage: places[indexPath.row])
+        cell?.setupCell(places: places[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
 }
