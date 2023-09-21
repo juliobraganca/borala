@@ -20,6 +20,12 @@
 				</dict>
 			</array>
 		</dict>
+        
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <string>Usaremos seu mapa para localizar seu roteiro</string>
+        
+        <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+        <string>Usaremos seu mapa para localizar seu roteiro</string>
 	</dict>
 </dict>
 </plist>
