@@ -10,11 +10,13 @@
 		363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */; };
 		363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */; };
 		363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA482ABC7A3A004AF499 /* HomeVC.swift */; };
-		363EBA4B2ABC7A43004AF499 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA4A2ABC7A43004AF499 /* HomeVC.storyboard */; };
 		363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA4D2ABC7B23004AF499 /* UIView+Ext.swift */; };
 		363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA4F2ABC7D99004AF499 /* UITextField+Ext.swift */; };
 		363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA522ABC7E5C004AF499 /* Constants.swift */; };
 		363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA542ABC80F7004AF499 /* UIButton+Ext.swift */; };
+		363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */; };
+		363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */; };
+		363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */; };
 		367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BB2A965AB9008E77D8 /* AppDelegate.swift */; };
 		367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BD2A965AB9008E77D8 /* SceneDelegate.swift */; };
 		367458C02A965AB9008E77D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BF2A965AB9008E77D8 /* ViewController.swift */; };
@@ -27,11 +29,13 @@
 		363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordVC.storyboard; sourceTree = "<group>"; };
 		363EBA482ABC7A3A004AF499 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		363EBA4A2ABC7A43004AF499 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
 		363EBA4D2ABC7B23004AF499 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		363EBA4F2ABC7D99004AF499 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		363EBA522ABC7E5C004AF499 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		363EBA542ABC80F7004AF499 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
+		363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		367458B82A965AB9008E77D8 /* borala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = borala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367458BB2A965AB9008E77D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367458BD2A965AB9008E77D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +60,9 @@
 		363EBA422ABC788E004AF499 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				363EBA5A2ABCB15E004AF499 /* Cell */,
 				363EBA482ABC7A3A004AF499 /* HomeVC.swift */,
-				363EBA4A2ABC7A43004AF499 /* HomeVC.storyboard */,
+				363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -87,6 +92,15 @@
 				363EBA522ABC7E5C004AF499 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		363EBA5A2ABCB15E004AF499 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */,
+				363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		367458AF2A965AB9008E77D8 = {
@@ -182,9 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */,
+				363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */,
 				367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
-				363EBA4B2ABC7A43004AF499 /* HomeVC.storyboard in Resources */,
+				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
 				363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +216,7 @@
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
+				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
