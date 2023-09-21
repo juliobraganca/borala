@@ -60,5 +60,9 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.orange.cgColor
     }
    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+          textField.layer.borderColor = UIColor.gray.cgColor
+      }
 
 }
