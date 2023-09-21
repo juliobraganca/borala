@@ -25,7 +25,7 @@ extension UITextField {
     
     func isTextFieldEmpty() {
         if self.hasText {
-            self.layer.borderColor = UIColor.orange.cgColor
+            self.layer.borderColor = Color.tangerine.cgColor
         } else {
             self.layer.borderColor = UIColor.red.cgColor
         }

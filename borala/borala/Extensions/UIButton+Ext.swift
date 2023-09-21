@@ -12,8 +12,8 @@ extension UIButton {
     func setupButton(title: String, isEnabled: Bool) {
         self.setTitle(title, for: .normal)
         self.isEnabled = isEnabled
-        configuration = .tinted()
-        configuration?.baseBackgroundColor = .orange
-        configuration?.baseForegroundColor = .orange
+        configuration = .filled()
+        configuration?.baseBackgroundColor = Color.tangerine
+        configuration?.baseForegroundColor = Color.neutral
     }
 }
