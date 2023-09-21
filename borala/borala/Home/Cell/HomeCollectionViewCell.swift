@@ -24,9 +24,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
         placeImageView.contentMode = .scaleAspectFill
     }
     
-    func setupCell(nameImage: String) {
-        placeImageView.image = UIImage(named: nameImage)
-        placeLabel.text = nameImage
+    func setupCell(places: Places) {
+        placeImageView.image = UIImage(named: places.nameImage)
+        placeLabel.text = places.placeName
         placeLabel.textColor = Color.tangerine
         placeLabel.font = UIFont.boldSystemFont(ofSize: 20)
     }
