@@ -59,7 +59,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-7k-o7m">
-                                <rect key="frame" x="30" y="539" width="119" height="35"/>
+                                <rect key="frame" x="30" y="539" width="119" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MLv-hx-CHk"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Cadastre-se"/>
                                 <connections>
@@ -67,7 +70,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-pg-XMl">
-                                <rect key="frame" x="215" y="539" width="148" height="35"/>
+                                <rect key="frame" x="215" y="539" width="148" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0hi-l4-VEG"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Esqueci a senha"/>
                             </button>

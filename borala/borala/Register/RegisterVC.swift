@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var newAccountLabel: UILabel!
     
@@ -39,26 +39,26 @@ class RegisterVC: UIViewController {
         newAccountLabel.text = "Nova Conta"
         
         nameTextField.placeholder = "Digite seu nome"
+        nameTextField.delegate = self
         
         registerEmailTextField.placeholder = "Digite seu email"
         registerEmailTextField.keyboardType = .emailAddress
+        registerEmailTextField.delegate = self
         
         registerPasswordTextField.placeholder = "Digite uma senha"
+        registerPasswordTextField.delegate = self
         
         repeatPasswordTextField.placeholder = "Repita a senha"
+        repeatPasswordTextField.delegate = self
         
         registerButton.setTitle("Cadastrar", for: .normal)
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.orange.cgColor
     }
-    */
+   
 
 }
