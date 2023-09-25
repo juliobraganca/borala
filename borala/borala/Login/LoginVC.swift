@@ -27,8 +27,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        let testRegisterScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
-        navigationController?.pushViewController(testRegisterScreen ?? UIViewController(), animated: true)
+//        let testRegisterScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
+//        navigationController?.pushViewController(testRegisterScreen ?? UIViewController(), animated: true)
 
     }
     
