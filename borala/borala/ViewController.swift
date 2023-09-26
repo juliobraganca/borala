@@ -34,13 +34,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var editImageProfileButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElementsBackground()
         configElementsTextfield()
         configElementsButtons()
-        
+        configElementsImageProfile()
        
         
     }
@@ -52,8 +51,6 @@ class ViewController: UIViewController {
     @IBAction func tappedBackButton(_ sender: UIButton) {
         print("Voltar")
     }
-    
-
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         print("Salvando")
@@ -70,13 +67,10 @@ class ViewController: UIViewController {
         print("Captura foto")
     }
     
-    
     func configElementsBackground(){
         backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.contentMode = .scaleAspectFill
-        
     }
-    
     
     func configElementsTextfield(){
         
@@ -122,32 +116,49 @@ class ViewController: UIViewController {
         editProfileButton.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         editProfileButton.layer.cornerRadius = editProfileButton.frame.size.width / 8
         editProfileButton.clipsToBounds = true
-        
-        
-        
+            }
+    
+    
+    func configElementsImageProfile(){
+        imageProfileImageView.image = UIImage(named: "profile")
+        imageProfileImageView.contentMode = .scaleAspectFill
+        imageProfileImageView.layer.borderColor = UIColor.orange.cgColor
+        imageProfileImageView.layer.borderWidth = 1
+        imageProfileImageView.layer.cornerRadius = imageProfileImageView.frame.size.width / 3
+        imageProfileImageView.clipsToBounds = true
+    }
+    
+    
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageProfileImageView.image = info[.originalImage] as? UIImage // utilizando a imgem original
+        dismiss(animated: true)
     }
 }
 extension ViewController: UITextFieldDelegate {
-    // este método é disparado sempre que clica no teclado
+    
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing")
         textField.layer.borderWidth = 3
         textField.layer.borderColor = UIColor.orange.cgColor
     }
-    //este método é disparado quando o teclado some.
+    
     public func textFieldDidEndEditing(_ textField: UITextField) {
         print("textFieldDidEndEditing")
         textField.layer.borderWidth = 0
     }
-    //este método dispara quando clica no retorno.
+   
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn")
         textField.resignFirstResponder() //utilizado para esconder o teclado.
         return true
     }
 }
-    
-    extension  UIViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-        
-    
+
+
+
+    extension  UIViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+     
+     
 }
+
