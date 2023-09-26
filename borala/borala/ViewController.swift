@@ -41,12 +41,35 @@ class ViewController: UIViewController {
         configElementsTextfield()
         
         
-        func configElementsBackground(){
-            backgroundImageView.image = UIImage(named: "background")
-            backgroundImageView.contentMode = .scaleAspectFill
-            
-        }
+       
+        
     }
+    
+    @IBAction func tappedEditProfileButton(_ sender: UIButton) {
+        print("Edit profile")
+    }
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        print("Voltar")
+    }
+    
+
+    
+    @IBAction func tappedSaveButton(_ sender: UIButton) {
+        print("Salvando")
+    }
+    
+    @IBAction func tappedEditImageProfileButton(_ sender: UIButton) {
+        print("Editando Imagem")
+    }
+    
+    
+    func configElementsBackground(){
+        backgroundImageView.image = UIImage(named: "background")
+        backgroundImageView.contentMode = .scaleAspectFill
+        
+    }
+    
     
     func configElementsTextfield(){
         
@@ -72,8 +95,14 @@ class ViewController: UIViewController {
         cityTextField.placeholder = "Digita cidade onde mora"
         passwordTextField.placeholder = "Trocar senha"
     }
+    
+    func configElementsButtons(){
+        
+        saveButton.setTitle("Salvar", for: .normal)
+        
+        
+    }
 }
-
 extension ViewController: UITextFieldDelegate {
     
     
