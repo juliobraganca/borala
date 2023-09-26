@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countryTextField: UITextField!
     
-    @IBOutlet weak var CityTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -46,4 +46,53 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    func configElementsTextfield(){
+        
+        //Assinando contratos
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        dateOfVBirthTextField.delegate = self
+        countryTextField.delegate = self
+        cityTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        //Configurando Teclados
+        nameTextField.keyboardType = .namePhonePad
+        emailTextField.keyboardType = .emailAddress
+        dateOfVBirthTextField.keyboardType = .numberPad
+        countryTextField.keyboardType = .namePhonePad
+        cityTextField.keyboardType = .namePhonePad
+        passwordTextField.keyboardType = .namePhonePad
+        
+        //Placeholder
+        dateOfVBirthTextField.placeholder = "DD/MM/AAAA"
+        countryTextField.placeholder = "Digite o pais onde mora"
+        cityTextField.placeholder = "Digita cidade onde mora"
+        passwordTextField.placeholder = "Trocar senha"
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    
+    
+    // este método é disparado sempre que clica no teclado
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("textFieldDidBeginEditing")
+        textField.layer.borderWidth = 3
+        textField.layer.borderColor = UIColor.orange.cgColor
+    }
+    //este método é disparado quando o teclado some.
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        print("textFieldDidEndEditing")
+        textField.layer.borderWidth = 0
+    }
+    //este método dispara quando clica no retorno.
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("textFieldShouldReturn")
+        textField.resignFirstResponder() //utilizado para esconder o teclado.
+        return true
+    }
+    
 }
