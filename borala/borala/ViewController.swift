@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElementsBackground()
+        configElementsTextfield()
         
         
         func configElementsBackground(){
