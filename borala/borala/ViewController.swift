@@ -60,7 +60,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedEditImageProfileButton(_ sender: UIButton) {
-        print("Editando Imagem")
+
+        let imageProfilePicker = UIImagePickerController()
+        imageProfilePicker.delegate = self
+        //imageProfilePicker.sourceType = .camera // captura imagens através da camera.
+        imageProfilePicker.sourceType = .photoLibrary // direcionando a origem das imagens: galeria.
+        imageProfilePicker.allowsEditing = true // permite a edição da foto.
+        present(imageProfilePicker, animated: true) //permissão para acessar galeria.
+        print("Captura foto")
     }
     
     
@@ -138,5 +145,9 @@ extension ViewController: UITextFieldDelegate {
         textField.resignFirstResponder() //utilizado para esconder o teclado.
         return true
     }
+}
+    
+    extension  UIViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+        
     
 }
