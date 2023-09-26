@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-KR-hMf">
-                                <rect key="frame" x="0.0" y="-8" width="393" height="890"/>
+                                <rect key="frame" x="-17" y="0.0" width="429" height="872"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -25,7 +25,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="bacgroundImageView" destination="rO0-KR-hMf" id="3TR-3A-3H1"/>
+                        <outlet property="backgroundImageView" destination="rO0-KR-hMf" id="7cZ-94-qPj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="401" height="860"/>
+        <image name="background" width="267.33334350585938" height="573.33331298828125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
