@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */; };
+		363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */; };
+		363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA482ABC7A3A004AF499 /* HomeVC.swift */; };
+		363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA4D2ABC7B23004AF499 /* UIView+Ext.swift */; };
+		363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA4F2ABC7D99004AF499 /* UITextField+Ext.swift */; };
+		363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA522ABC7E5C004AF499 /* Constants.swift */; };
+		363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA542ABC80F7004AF499 /* UIButton+Ext.swift */; };
+		363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */; };
+		363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */; };
+		363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */; };
+		363EBA692ABCEE68004AF499 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA682ABCEE68004AF499 /* Places.swift */; };
 		367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BB2A965AB9008E77D8 /* AppDelegate.swift */; };
 		367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BD2A965AB9008E77D8 /* SceneDelegate.swift */; };
 		367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367458BF2A965AB9008E77D8 /* LoginVC.swift */; };
@@ -18,6 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPasswordVC.storyboard; sourceTree = "<group>"; };
+		363EBA482ABC7A3A004AF499 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		363EBA4D2ABC7B23004AF499 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		363EBA4F2ABC7D99004AF499 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
+		363EBA522ABC7E5C004AF499 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		363EBA542ABC80F7004AF499 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
+		363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		363EBA682ABCEE68004AF499 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		367458B82A965AB9008E77D8 /* borala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = borala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		367458BB2A965AB9008E77D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367458BD2A965AB9008E77D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +63,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		363EBA422ABC788E004AF499 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA5A2ABCB15E004AF499 /* Cell */,
+				363EBA482ABC7A3A004AF499 /* HomeVC.swift */,
+				363EBA562ABCA9C2004AF499 /* HomeVC.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		363EBA432ABC78DF004AF499 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */,
+				363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		363EBA4C2ABC7AE5004AF499 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA4D2ABC7B23004AF499 /* UIView+Ext.swift */,
+				363EBA4F2ABC7D99004AF499 /* UITextField+Ext.swift */,
+				363EBA542ABC80F7004AF499 /* UIButton+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		363EBA512ABC7E43004AF499 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA522ABC7E5C004AF499 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		363EBA5A2ABCB15E004AF499 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA5B2ABCB24F004AF499 /* HomeCollectionViewCell.swift */,
+				363EBA5C2ABCB24F004AF499 /* HomeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		363EBA672ABCEE5E004AF499 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				363EBA682ABCEE68004AF499 /* Places.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		367458AF2A965AB9008E77D8 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +136,16 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				D63023952ABBC3CC001092C1 /* Register */,
 				D63023942ABBC3B0001092C1 /* Login */,
+=======
+				363EBA672ABCEE5E004AF499 /* Model */,
+				363EBA512ABC7E43004AF499 /* Utilities */,
+				363EBA4C2ABC7AE5004AF499 /* Extensions */,
+				363EBA432ABC78DF004AF499 /* ForgotPassword */,
+				363EBA422ABC788E004AF499 /* Home */,
+>>>>>>> homeAndForgotPassword
 				367458BB2A965AB9008E77D8 /* AppDelegate.swift */,
 				367458BD2A965AB9008E77D8 /* SceneDelegate.swift */,
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
@@ -148,9 +232,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */,
+				363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */,
 				367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */,
 				D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
+				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
+				363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +248,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
+=======
+				367458C02A965AB9008E77D8 /* ViewController.swift in Sources */,
+				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
+				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
+				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
+				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
+				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
+>>>>>>> homeAndForgotPassword
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
+				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
+				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
+				363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -294,6 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
