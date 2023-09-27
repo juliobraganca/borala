@@ -9,5 +9,5 @@ import UIKit
 
 struct Places {
     let placeName: String
-    let nameImage: String
+    let imageName: String
 }

@@ -9,24 +9,21 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPlanButton: UIButton!
     
-    
-    var places: [Places] = [Places(placeName: "Chile", nameImage: "Chile"),
-                            Places(placeName: "Bali", nameImage: "Bali"),
-                            Places(placeName: "Rio de Janeiro", nameImage: "RJ"),
-                            Places(placeName: "Paris", nameImage: "paris"),
-                            Places(placeName: "Africa do Sul", nameImage: "southAfrica"),
-                            Places(placeName: "Sydney", nameImage: "sydney"),
-                            Places(placeName: "Maceió", nameImage: "maceio"),
-                            Places(placeName: "Ouro Preto", nameImage: "ouroPreto"),
-                            Places(placeName: "Florianópolis", nameImage: "floripa"),
-                            Places(placeName: "Bonito", nameImage: "BonitoMS"),
-                            Places(placeName: "Gramado", nameImage: "gramado"),
-    ]
+    var places: [Places] = [Places(placeName: "Chile",          imageName: "Chile"),
+                            Places(placeName: "Bali",           imageName: "Bali"),
+                            Places(placeName: "Rio de Janeiro", imageName: "RJ"),
+                            Places(placeName: "Paris",          imageName: "paris"),
+                            Places(placeName: "Africa do Sul",  imageName: "southAfrica"),
+                            Places(placeName: "Sydney",         imageName: "sydney"),
+                            Places(placeName: "Maceió",         imageName: "maceio"),
+                            Places(placeName: "Ouro Preto",     imageName: "ouroPreto"),
+                            Places(placeName: "Florianópolis",  imageName: "floripa"),
+                            Places(placeName: "Bonito",         imageName: "BonitoMS"),
+                            Places(placeName: "Gramado",        imageName: "gramado"),]
     
     
     override func viewDidLoad() {
@@ -57,14 +54,13 @@ class HomeVC: UIViewController {
     func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         collectionView.backgroundColor = UIColor.clear
+        
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             layout.estimatedItemSize = .zero
         }
-        
-        collectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
     }
     
     
