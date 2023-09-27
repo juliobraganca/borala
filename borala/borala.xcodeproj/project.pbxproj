@@ -63,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360D4BED2AC4C5810089C067 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D63023942ABBC3B0001092C1 /* Login */,
+				D63023952ABBC3CC001092C1 /* Register */,
+				363EBA432ABC78DF004AF499 /* ForgotPassword */,
+				363EBA422ABC788E004AF499 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		363EBA422ABC788E004AF499 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,16 +147,10 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				D63023952ABBC3CC001092C1 /* Register */,
-				D63023942ABBC3B0001092C1 /* Login */,
-=======
 				363EBA672ABCEE5E004AF499 /* Model */,
-				363EBA512ABC7E43004AF499 /* Utilities */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
-				363EBA432ABC78DF004AF499 /* ForgotPassword */,
-				363EBA422ABC788E004AF499 /* Home */,
->>>>>>> homeAndForgotPassword
+				363EBA512ABC7E43004AF499 /* Utilities */,
+				360D4BED2AC4C5810089C067 /* Screens */,
 				367458BB2A965AB9008E77D8 /* AppDelegate.swift */,
 				367458BD2A965AB9008E77D8 /* SceneDelegate.swift */,
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
@@ -248,17 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
-=======
-				367458C02A965AB9008E77D8 /* ViewController.swift in Sources */,
+				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
 				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
->>>>>>> homeAndForgotPassword
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
 				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,

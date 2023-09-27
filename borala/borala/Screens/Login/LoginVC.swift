@@ -26,17 +26,25 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         configElements()
     }
     
+    
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-//        let testRegisterScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
-//        navigationController?.pushViewController(testRegisterScreen ?? UIViewController(), animated: true)
+        let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+        navigationController?.pushViewController(homeVC ?? UIViewController(), animated: true)
 
     }
+    
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
         navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
-
     }
+    
+    
+    @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
+        let forgotPasswordVC = UIStoryboard(name: "ForgotPasswordVC", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
+        navigationController?.pushViewController(forgotPasswordVC ?? UIViewController(), animated: true)
+    }
+    
     
     
     
