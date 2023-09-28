@@ -28,7 +28,7 @@
         <!--map-->
         <scene sceneID="75k-po-QQQ">
             <objects>
-                <viewController storyboardIdentifier="MapAccessViewController" id="GlZ-zb-gY1" customClass="MapViewController" customModule="borala" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="GlZ-zb-gY1" customClass="MapViewController" customModule="borala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fro-wU-3su">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

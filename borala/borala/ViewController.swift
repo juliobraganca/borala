@@ -16,9 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(
-            CitiesCollectionViewCell.self,
-            forCellWithReuseIdentifier: CitiesCollectionViewCell.identifier)
+        
+        collectionView.register(CitiesCollectionViewCell.self, forCellWithReuseIdentifier: CitiesCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(collectionView)
