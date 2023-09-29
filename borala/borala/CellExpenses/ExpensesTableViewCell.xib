@@ -27,7 +27,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title=""/>
                     </button>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLd-B5-y6n">
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLd-B5-y6n">
                         <rect key="frame" x="463" y="0.0" width="83" height="40"/>
                         <color key="backgroundColor" red="0.97149807210000005" green="0.59907674789999998" blue="0.38665392990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -65,7 +65,7 @@
                 <outlet property="descriptionTextField" destination="sn2-my-isd" id="yAd-jX-XyZ"/>
                 <outlet property="valueTextField" destination="YLd-B5-y6n" id="Foj-ZW-jiF"/>
             </connections>
-            <point key="canvasLocation" x="-29" y="-10"/>
+            <point key="canvasLocation" x="-89" y="1"/>
         </tableViewCell>
     </objects>
 </document>

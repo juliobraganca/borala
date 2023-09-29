@@ -94,18 +94,20 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-Va-9ev">
                                 <rect key="frame" x="294.33333333333331" y="779" width="73.666666666666686" height="35"/>
                                 <color key="backgroundColor" red="0.97149807210000005" green="0.59907674789999998" blue="0.38665392990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Ah3-dO-FeQ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Somar"/>
                                 <connections>
                                     <action selector="tappedSumButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvh-1R-kN9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-ZD-0Qe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-ZD-0Qe">
                                 <rect key="frame" x="285" y="704" width="83" height="30"/>
                                 <color key="backgroundColor" red="0.97149807210000005" green="0.59907674789999998" blue="0.38665392990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="I7p-Hl-B8v"/>
-                                    <constraint firstAttribute="width" constant="83" id="hCM-k1-vwr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -125,10 +127,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MRq-0v-5eC" secondAttribute="trailing" constant="25" id="2Ou-Ob-QPh"/>
+                            <constraint firstItem="a4T-Va-9ev" firstAttribute="top" secondItem="7yo-ZD-0Qe" secondAttribute="bottom" constant="45" id="6Ko-nb-5CN"/>
                             <constraint firstItem="qcV-2P-Quw" firstAttribute="firstBaseline" secondItem="blp-oi-YPS" secondAttribute="baseline" id="75r-SP-OMG"/>
                             <constraint firstItem="MRq-0v-5eC" firstAttribute="top" secondItem="blp-oi-YPS" secondAttribute="bottom" constant="10.67" id="7B1-tI-5jk"/>
                             <constraint firstItem="7yo-ZD-0Qe" firstAttribute="top" secondItem="MRq-0v-5eC" secondAttribute="bottom" constant="25" id="8cg-T5-M07"/>
                             <constraint firstItem="vWC-4I-f5p" firstAttribute="top" secondItem="blp-oi-YPS" secondAttribute="top" id="9GG-og-9EH"/>
+                            <constraint firstItem="ABf-my-bEv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="235.33000000000001" id="GGI-hC-yi5"/>
                             <constraint firstItem="ABf-my-bEv" firstAttribute="top" secondItem="MRq-0v-5eC" secondAttribute="bottom" constant="25" id="GH7-I5-wAL"/>
                             <constraint firstItem="blp-oi-YPS" firstAttribute="leading" secondItem="vWC-4I-f5p" secondAttribute="trailing" constant="10" id="GnS-2C-Gfu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KcJ-eZ-LMo" secondAttribute="trailing" symbolic="YES" id="IjX-ju-TaC"/>
@@ -146,6 +150,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7yo-ZD-0Qe" secondAttribute="trailing" constant="25" id="cnX-ZU-9OF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30I-GU-OQm" secondAttribute="trailing" constant="1" id="dGz-Gg-l09"/>
                             <constraint firstItem="KcJ-eZ-LMo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="deG-zQ-nR1"/>
+                            <constraint firstItem="qcV-2P-Quw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="blp-oi-YPS" secondAttribute="trailing" constant="8" symbolic="YES" id="fYL-qY-Hz9"/>
                             <constraint firstItem="JCy-ZC-2RC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fxh-iW-db8"/>
                             <constraint firstItem="FfB-fO-yNJ" firstAttribute="top" secondItem="MRq-0v-5eC" secondAttribute="bottom" constant="100" id="hCC-di-FxH"/>
                             <constraint firstItem="MRq-0v-5eC" firstAttribute="top" secondItem="qcV-2P-Quw" secondAttribute="bottom" constant="11" id="hwD-5G-2vK"/>
@@ -159,7 +164,6 @@
                             <constraint firstItem="KcJ-eZ-LMo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="q1e-Ta-LQx"/>
                             <constraint firstItem="MRq-0v-5eC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qco-ZC-hHb"/>
                             <constraint firstItem="NSU-Dy-IVR" firstAttribute="top" secondItem="JCy-ZC-2RC" secondAttribute="bottom" constant="15" id="xDL-5y-KfW"/>
-                            <constraint firstItem="a4T-Va-9ev" firstAttribute="top" secondItem="ABf-my-bEv" secondAttribute="bottom" constant="45" id="yJa-lo-eBw"/>
                         </constraints>
                     </view>
                     <connections>
