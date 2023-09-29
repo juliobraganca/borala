@@ -13,8 +13,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sppentsImageView: UIImageView!
     
-    
     @IBOutlet weak var budgetTableView: UITableView!
+    
+    @IBOutlet weak var addbudgetButton: UIButton!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBOutlet weak var sumButton: UIButton!
+    
     
     var list: [Cost] = [Cost(description: "Ingresso Pão de Açucar", value: "56", check: true),
                         Cost(description: "Ingresso Fla x Vasco", value: "200", check: true),
@@ -51,7 +57,7 @@ class ViewController: UIViewController {
         sppentsImageView.contentMode = .scaleToFill
     }
     func configElementsTableView(){
-        //budgetTableView.backgroundColor = .systemBackground.self
+        budgetTableView.backgroundColor = UIColor.clear
         budgetTableView.delegate = self
         budgetTableView.dataSource = self
         budgetTableView.register(ExpensesTableViewCell.nib(), forCellReuseIdentifier:ExpensesTableViewCell.identfier)
