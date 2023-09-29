@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var sppentsImageView: UIImageView!
@@ -20,6 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBOutlet weak var sumButton: UIButton!
+    
+    
+    let newresult: Double = 0
     
     
     var list: [Cost] = [Cost(description: "Ingresso Pão de Açucar", value: "56", check: true),
@@ -34,23 +39,34 @@ class ViewController: UIViewController {
                         Cost(description: "Açai Ipanema", value: "40", check: true),
                         Cost(description: "Bike Itau", value: "56", check: true),
                         Cost(description: "Ingresso Pão de Açucar", value: "100", check: true),
-                        
-                        
     ]
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         configElementsBackground()
         ConfigElementesSppents()
         configElementsTableView()
+        resultLabel.text = " R$ \(newresult)"
     }
     
+    
+    @IBAction func tappedBackButton(_ sender: UIButton) {
+        print("Voltar")
+    }
+    
+    @IBAction func tappedAddButton(_ sender: UIButton) {
+        print("Adicionado uma nova celula")
+    }
+    
+    @IBAction func tappedSumButton(_ sender: UIButton) {
+        print("Somar")
+    }
     
     func configElementsBackground(){
         backgroundImageView.image = UIImage(named: "background")
         backgroundImageView.contentMode = .scaleToFill
     }
+    
     
     func ConfigElementesSppents(){
         sppentsImageView.image = UIImage(named: "spents")
@@ -64,7 +80,6 @@ class ViewController: UIViewController {
     }
     
 }
-
 
 extension ViewController: UITableViewDataSource {
     
@@ -84,5 +99,8 @@ extension ViewController: UITableViewDataSource {
 }
 extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
+        print("")
+    }
     
 }

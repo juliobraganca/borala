@@ -34,6 +34,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOd-Hg-hsa"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orçamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phH-SE-L9f">
                                 <rect key="frame" x="25" y="119.99999999999999" width="116" height="28.333333333333329"/>
@@ -84,12 +87,18 @@
                                 <color key="backgroundColor" red="0.97149807210000005" green="0.59907674789999998" blue="0.38665392990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Adicionar"/>
+                                <connections>
+                                    <action selector="tappedAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46Z-cR-SLc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-Va-9ev">
                                 <rect key="frame" x="294.33333333333331" y="779" width="73.666666666666686" height="35"/>
                                 <color key="backgroundColor" red="0.97149807210000005" green="0.59907674789999998" blue="0.38665392990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Somar"/>
+                                <connections>
+                                    <action selector="tappedSumButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvh-1R-kN9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yo-ZD-0Qe">
                                 <rect key="frame" x="285" y="704" width="83" height="30"/>
@@ -155,6 +164,7 @@
                     </view>
                     <connections>
                         <outlet property="addbudgetButton" destination="FfB-fO-yNJ" id="Zfj-vJ-fBx"/>
+                        <outlet property="backButton" destination="KcJ-eZ-LMo" id="D9N-S1-Ma3"/>
                         <outlet property="backgroundImageView" destination="30I-GU-OQm" id="xcb-3T-Lnl"/>
                         <outlet property="budgetTableView" destination="MRq-0v-5eC" id="vD7-FE-9Av"/>
                         <outlet property="resultLabel" destination="7yo-ZD-0Qe" id="x5j-Yr-8sU"/>
