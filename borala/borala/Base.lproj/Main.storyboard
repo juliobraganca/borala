@@ -16,31 +16,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="30I-GU-OQm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="30I-GU-OQm">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-eZ-LMo">
+                                <rect key="frame" x="25" y="69" width="87" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="&lt; voltar">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orçamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phH-SE-L9f">
+                                <rect key="frame" x="25" y="120" width="116" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade - Estado " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCy-ZC-2RC">
+                                <rect key="frame" x="25" y="153" width="127" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spents" translatesAutoresizingMaskIntoConstraints="NO" id="NSU-Dy-IVR">
+                                <rect key="frame" x="121.66666666666669" y="188.33333333333334" width="150" height="90.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ABn-rF-d5y"/>
+                                    <constraint firstAttribute="width" constant="150" id="Lr3-CQ-J7Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KcJ-eZ-LMo" secondAttribute="trailing" symbolic="YES" id="IjX-ju-TaC"/>
                             <constraint firstItem="30I-GU-OQm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mi2-fr-2YN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="30I-GU-OQm" secondAttribute="bottom" id="SIo-vz-XGM"/>
+                            <constraint firstItem="phH-SE-L9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Tcz-bu-IXJ"/>
+                            <constraint firstItem="JCy-ZC-2RC" firstAttribute="top" secondItem="phH-SE-L9f" secondAttribute="bottom" constant="4" id="Uhf-pX-viA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30I-GU-OQm" secondAttribute="trailing" id="dGz-Gg-l09"/>
+                            <constraint firstItem="KcJ-eZ-LMo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="deG-zQ-nR1"/>
+                            <constraint firstItem="JCy-ZC-2RC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="fxh-iW-db8"/>
+                            <constraint firstItem="phH-SE-L9f" firstAttribute="top" secondItem="KcJ-eZ-LMo" secondAttribute="bottom" constant="15" id="kTH-f4-kpm"/>
                             <constraint firstItem="30I-GU-OQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kjt-9W-bnj"/>
+                            <constraint firstItem="NSU-Dy-IVR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pYH-P7-qsH"/>
+                            <constraint firstItem="KcJ-eZ-LMo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="q1e-Ta-LQx"/>
+                            <constraint firstItem="NSU-Dy-IVR" firstAttribute="top" secondItem="JCy-ZC-2RC" secondAttribute="bottom" constant="15" id="xDL-5y-KfW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="30I-GU-OQm" id="xcb-3T-Lnl"/>
+                        <outlet property="sppentsImageView" destination="NSU-Dy-IVR" id="tKa-8u-D8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-34"/>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="background" width="401" height="860"/>
+        <image name="spents" width="238" height="197"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
