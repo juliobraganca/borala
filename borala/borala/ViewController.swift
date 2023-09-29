@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sppentsImageView: UIImageView!
     
- 
     @IBOutlet weak var budgetTableView: UITableView!
     
     
