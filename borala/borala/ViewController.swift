@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
+        addNewItem()
         print("Adicionado uma nova celula")
     }
     
@@ -79,6 +80,13 @@ class ViewController: UIViewController {
         budgetTableView.register(ExpensesTableViewCell.nib(), forCellReuseIdentifier:ExpensesTableViewCell.identfier)
     }
     
+    func addNewItem(){
+        let newItem = Cost(description: "", value: "", check: true)
+        list.append(newItem)
+        budgetTableView.reloadData()
+        
+        
+    }
 }
 
 extension ViewController: UITableViewDataSource {
