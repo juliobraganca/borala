@@ -32,13 +32,7 @@ class ViewController: UIViewController {
                         Cost( description: "Jantar no Oro", value: "500", check: true),
                         Cost(description: "Uber Urca", value: "45", check: true),
                         Cost(description: "Açai Ipanema", value: "40", check: true),
-                        Cost(description: "Bike Itau", value: "56", check: true),
-                        Cost(description: "Ingresso Pão de Açucar", value: "100", check: true),
-                        Cost( description: "Jantar no Oro", value: "500", check: true),
-                        Cost(description: "Uber Urca", value: "45", check: true),
-                        Cost(description: "Açai Ipanema", value: "40", check: true),
-                        Cost(description: "Bike Itau", value: "56", check: true),
-                        Cost(description: "Ingresso Pão de Açucar", value: "100", check: true),
+                      
     ]
    
     override func viewDidLoad() {
@@ -85,6 +79,10 @@ class ViewController: UIViewController {
         list.append(newItem)
         budgetTableView.reloadData()
         
+       // func configElementsTextField(){
+            
+       // }
+        
         
     }
 }
@@ -106,9 +104,22 @@ extension ViewController: UITableViewDataSource {
     
 }
 extension ViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
-        print("")
-    }
-    
-}
+//
+
+  }
+//
+//}
+
+//extension ViewController: UITextFieldDelegate {
+//
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("textFieldDidBeginEditing")
+//    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        print("textFieldShouldReturn")
+//        return true
+//    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        print("textFieldDidEndEditing")
+//    }
+//}
