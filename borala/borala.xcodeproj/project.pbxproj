@@ -26,6 +26,8 @@
 		367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
+		D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */; };
+		D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187532ACDDB3300C66A2B /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		367458C92A965ABA008E77D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		D92187532ACDDB3300C66A2B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				D92187502ACDDAEE00C66A2B /* Profile */,
 				363EBA672ABCEE5E004AF499 /* Model */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
 				363EBA512ABC7E43004AF499 /* Utilities */,
@@ -176,6 +181,15 @@
 				D63023982ABBCC13001092C1 /* RegisterVC.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		D92187502ACDDAEE00C66A2B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */,
+				D92187532ACDDB3300C66A2B /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,7 @@
 				D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
 				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
+				D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */,
 				363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +272,7 @@
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
 				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
+				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
