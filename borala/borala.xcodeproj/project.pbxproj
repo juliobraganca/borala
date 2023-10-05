@@ -24,6 +24,8 @@
 		367458C32A965AB9008E77D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C12A965AB9008E77D8 /* Main.storyboard */; };
 		367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367458C42A965ABA008E77D8 /* Assets.xcassets */; };
 		367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */; };
+		36A51FA12ACF07E300A63521 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A51FA02ACF07E300A63521 /* MapsVC.swift */; };
+		36A51FA32ACF07FB00A63521 /* MapsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
 		D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */; };
@@ -55,6 +57,8 @@
 		367458C42A965ABA008E77D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367458C72A965ABA008E77D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367458C92A965ABA008E77D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A51FA02ACF07E300A63521 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
+		36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsVC.storyboard; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		360D4BED2AC4C5810089C067 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				36A51F9F2ACF07BF00A63521 /* Maps */,
 				D63023942ABBC3B0001092C1 /* Login */,
 				D63023952ABBC3CC001092C1 /* Register */,
 				363EBA432ABC78DF004AF499 /* ForgotPassword */,
@@ -174,6 +179,15 @@
 				367458C92A965ABA008E77D8 /* Info.plist */,
 			);
 			path = borala;
+			sourceTree = "<group>";
+		};
+		36A51F9F2ACF07BF00A63521 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				36A51FA02ACF07E300A63521 /* MapsVC.swift */,
+				36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 		D63023942ABBC3B0001092C1 /* Login */ = {
@@ -307,6 +321,7 @@
 				D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */,
 				D980C0E82ACE5E6E00092AA6 /* ExpensesTableViewCell.xib in Resources */,
 				363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */,
+				36A51FA32ACF07FB00A63521 /* MapsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +343,7 @@
 				D980C0E72ACE5E6E00092AA6 /* ExpensesTableViewCell.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
 				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
+				36A51FA12ACF07E300A63521 /* MapsVC.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
 				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,
