@@ -31,6 +31,7 @@
 		36A51FA32ACF07FB00A63521 /* MapsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
+		D6ED3B8B2ACF2AAF00748F55 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */; };
 		D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */; };
 		D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187532ACDDB3300C66A2B /* ProfileViewController.swift */; };
 		D92187582ACE483700C66A2B /* BudgetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187572ACE483700C66A2B /* BudgetViewController.storyboard */; };
@@ -67,6 +68,7 @@
 		36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsVC.storyboard; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		D92187532ACDDB3300C66A2B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D92187572ACE483700C66A2B /* BudgetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BudgetViewController.storyboard; path = BudgetVC/BudgetViewController.storyboard; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
 				367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */,
 				367458C92A965ABA008E77D8 /* Info.plist */,
+				D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */,
 			);
 			path = borala;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
 				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
+				D6ED3B8B2ACF2AAF00748F55 /* TabBarController.swift in Sources */,
 				D980C0DF2ACE5D2A00092AA6 /* Cost.swift in Sources */,
 				363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */,
 			);
