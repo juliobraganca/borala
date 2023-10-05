@@ -12,13 +12,14 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addControllers()
+        configLayout()
         
     }
     
     func addControllers() {
         
         let home: UINavigationController = {
-            let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
+            let vc = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
             nav.tabBarItem = UITabBarItem(title: "HomeVC", image: UIImage(systemName: "house"), tag: 0)
             return nav
@@ -54,7 +55,7 @@ class TabBarController: UITabBarController {
         tabBar.backgroundColor = .white
     }
     
-    //ehahuehae
+   
     
 
 }

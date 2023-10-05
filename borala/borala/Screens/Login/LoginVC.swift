@@ -28,9 +28,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        let homeVC = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
-        navigationController?.pushViewController(homeVC ?? UIViewController(), animated: true)
 
+        self.navigationController?.pushViewController(TabBarController(), animated: true)
+        //}
     }
     
     
