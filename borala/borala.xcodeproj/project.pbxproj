@@ -24,6 +24,9 @@
 		367458C32A965AB9008E77D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C12A965AB9008E77D8 /* Main.storyboard */; };
 		367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367458C42A965ABA008E77D8 /* Assets.xcassets */; };
 		367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */; };
+		3698245D2ACF11BB00AD0ABC /* AddCityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3698245A2ACF11BB00AD0ABC /* AddCityViewController.storyboard */; };
+		3698245E2ACF11BB00AD0ABC /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698245C2ACF11BB00AD0ABC /* AddCityViewController.swift */; };
+		369824602ACF11F500AD0ABC /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698245F2ACF11F500AD0ABC /* CitiesCollectionViewCell.swift */; };
 		36A51FA12ACF07E300A63521 /* MapsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A51FA02ACF07E300A63521 /* MapsVC.swift */; };
 		36A51FA32ACF07FB00A63521 /* MapsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
@@ -57,6 +60,9 @@
 		367458C42A965ABA008E77D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367458C72A965ABA008E77D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		367458C92A965ABA008E77D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3698245A2ACF11BB00AD0ABC /* AddCityViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddCityViewController.storyboard; sourceTree = "<group>"; };
+		3698245C2ACF11BB00AD0ABC /* AddCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
+		3698245F2ACF11F500AD0ABC /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		36A51FA02ACF07E300A63521 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsVC.storyboard; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 		360D4BED2AC4C5810089C067 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				369824592ACF11BB00AD0ABC /* AddCity */,
 				D63023942ABBC3B0001092C1 /* Login */,
 				D63023952ABBC3CC001092C1 /* Register */,
 				363EBA432ABC78DF004AF499 /* ForgotPassword */,
@@ -179,6 +186,24 @@
 				367458C92A965ABA008E77D8 /* Info.plist */,
 			);
 			path = borala;
+			sourceTree = "<group>";
+		};
+		369824592ACF11BB00AD0ABC /* AddCity */ = {
+			isa = PBXGroup;
+			children = (
+				3698245B2ACF11BB00AD0ABC /* Cell */,
+				3698245A2ACF11BB00AD0ABC /* AddCityViewController.storyboard */,
+				3698245C2ACF11BB00AD0ABC /* AddCityViewController.swift */,
+			);
+			path = AddCity;
+			sourceTree = "<group>";
+		};
+		3698245B2ACF11BB00AD0ABC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3698245F2ACF11F500AD0ABC /* CitiesCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		36A51F9F2ACF07BF00A63521 /* Maps */ = {
@@ -313,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3698245D2ACF11BB00AD0ABC /* AddCityViewController.storyboard in Resources */,
 				367458C82A965ABA008E77D8 /* LaunchScreen.storyboard in Resources */,
 				363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */,
 				367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */,
@@ -335,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
+				369824602ACF11F500AD0ABC /* CitiesCollectionViewCell.swift in Sources */,
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
+				3698245E2ACF11BB00AD0ABC /* AddCityViewController.swift in Sources */,
 				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
 				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,

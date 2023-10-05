@@ -69,6 +69,13 @@ class HomeVC: UIViewController {
     func configureButton() {
         addPlanButton.setupButton(title: "Adicionar Roteiro", isEnabled: true)
     }
+    
+    
+    @IBAction func tappedAddPlanButton(_ sender: Any) {
+        let addCity = UIStoryboard(name: "AddCityViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCityViewController") as? AddCityViewController
+        navigationController?.pushViewController(addCity ?? UIViewController(), animated: true)
+    }
+    
 }
 
 
