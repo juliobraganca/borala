@@ -101,23 +101,26 @@ class ProfileViewController: UIViewController {
     
     func configElementsButtons(){
         
-        saveButton.setTitle("Salvar", for: .normal)
-        saveButton.backgroundColor = UIColor.orange
-        //saveButton.layer.borderColor = UIColor.lightGray.cgColor
-        saveButton.layer.borderWidth = 1
-        saveButton.setTitleColor(UIColor.white, for: .normal)
-        saveButton.titleLabel?.font = UIFont(name: "Helvetica", size: 10)
-        saveButton.layer.cornerRadius = saveButton.frame.size.width / 8
-        saveButton.clipsToBounds = true
+//        saveButton.setTitle("Salvar", for: .normal)
+//        saveButton.backgroundColor = UIColor.orange
+//        //saveButton.layer.borderColor = UIColor.lightGray.cgColor
+//        saveButton.layer.borderWidth = 1
+//        saveButton.setTitleColor(UIColor.white, for: .normal)
+//        saveButton.titleLabel?.font = UIFont(name: "Helvetica", size: 10)
+//        saveButton.layer.cornerRadius = saveButton.frame.size.width / 8
+//        saveButton.clipsToBounds = true
         
-        editProfileButton.setTitle("Edit. Perfil", for: .normal)
-        editProfileButton.backgroundColor = UIColor.orange
-        //editProfileButton.layer.borderColor = UIColor.lightGray.cgColor
-        editProfileButton.layer.borderWidth = 1
-        editProfileButton.setTitleColor(UIColor.white, for: .normal)
-        editProfileButton.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
-        editProfileButton.layer.cornerRadius = editProfileButton.frame.size.width / 8
-        editProfileButton.clipsToBounds = true
+//        editProfileButton.setTitle("Edit. Perfil", for: .normal)
+//        editProfileButton.backgroundColor = UIColor.orange
+//        //editProfileButton.layer.borderColor = UIColor.lightGray.cgColor
+//        editProfileButton.layer.borderWidth = 1
+//        editProfileButton.setTitleColor(UIColor.white, for: .normal)
+//        editProfileButton.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+//        editProfileButton.layer.cornerRadius = editProfileButton.frame.size.width / 8
+//        editProfileButton.clipsToBounds = true
+        
+        saveButton.setupButton(title: "Salvar", isEnabled: true)
+        editProfileButton.setupButton(title: "Edit. Perfil", isEnabled: true)
             }
     
     

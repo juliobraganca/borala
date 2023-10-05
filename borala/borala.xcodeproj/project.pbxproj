@@ -154,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				363EBA682ABCEE68004AF499 /* Places.swift */,
+				D980C0DE2ACE5D2A00092AA6 /* Cost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,26 +253,9 @@
 				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
 				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
 				D980C0E02ACE5D8A00092AA6 /* CellExpenses */,
-				D980C0DD2ACE5D0900092AA6 /* Models */,
-				D980C0DC2ACE5C7D00092AA6 /* BudgetVC */,
 			);
 			name = Budget;
 			path = ../Budget;
-			sourceTree = "<group>";
-		};
-		D980C0DC2ACE5C7D00092AA6 /* BudgetVC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BudgetVC;
-			sourceTree = "<group>";
-		};
-		D980C0DD2ACE5D0900092AA6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D980C0DE2ACE5D2A00092AA6 /* Cost.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		D980C0E02ACE5D8A00092AA6 /* CellExpenses */ = {

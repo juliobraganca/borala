@@ -61,24 +61,26 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         
         registerGreyButton.setTitle("Cadastre-se", for: .normal)
-        registerGreyButton.layer.borderColor = UIColor.blue.cgColor
+        registerGreyButton.layer.borderColor = Color.tangerine.cgColor
         registerGreyButton.layer.borderWidth = 1.0
-        registerGreyButton.layer.borderColor = UIColor.systemBlue.cgColor
+        registerGreyButton.layer.borderColor = Color.tangerine.cgColor
         registerGreyButton.layer.cornerRadius = 10.0
         registerGreyButton.clipsToBounds = true
-        registerGreyButton.backgroundColor = UIColor.lightGray
+        registerGreyButton.backgroundColor = Color.tangerine
+        registerGreyButton.setTitleColor(Color.neutral, for: .normal)
         
         
         forgotPasswordGreyButton.setTitle("Esqueci a senha", for: .normal)
-        forgotPasswordGreyButton.layer.borderColor = UIColor.blue.cgColor
+        forgotPasswordGreyButton.layer.borderColor = Color.tangerine.cgColor
         forgotPasswordGreyButton.layer.borderWidth = 1.0
-        forgotPasswordGreyButton.layer.borderColor = UIColor.systemBlue.cgColor
+        forgotPasswordGreyButton.layer.borderColor = Color.tangerine.cgColor
         forgotPasswordGreyButton.layer.cornerRadius = 10.0
         forgotPasswordGreyButton.clipsToBounds = true
-        forgotPasswordGreyButton.backgroundColor = UIColor.lightGray
+        forgotPasswordGreyButton.backgroundColor = Color.tangerine
+        forgotPasswordGreyButton.setTitleColor(Color.neutral, for: .normal)
 
         enterButton.setTitle("Entrar", for: .normal)
-        enterButton.tintColor = .orange
+        enterButton.tintColor = Color.tangerine
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
