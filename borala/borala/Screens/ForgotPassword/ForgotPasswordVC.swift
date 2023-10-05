@@ -44,6 +44,8 @@ class ForgotPasswordVC: UIViewController {
     
     
     @IBAction func tappedConfirmButton(_ sender: UIButton) {
+        
+        self.navigationController?.pushViewController(LoginVC(), animated: true)
     }
 }
 

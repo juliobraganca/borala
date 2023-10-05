@@ -91,6 +91,8 @@ class ProfileViewController: UIViewController {
         passwordTextField.keyboardType = .namePhonePad
         
         //Placeholder
+        nameTextField.placeholder = "Digite seu nome"
+        emailTextField.placeholder = "Digite seu e-mail"
         dateOfVBirthTextField.placeholder = "DD/MM/AAAA"
         countryTextField.placeholder = "Digite o pais onde mora"
         cityTextField.placeholder = "Digita cidade onde mora"
@@ -120,11 +122,11 @@ class ProfileViewController: UIViewController {
     
     
     func configElementsImageProfile(){
-        imageProfileImageView.image = UIImage(named: "profile")
+        imageProfileImageView.image = UIImage(systemName: "person.circle.fill")
         imageProfileImageView.contentMode = .scaleAspectFill
         imageProfileImageView.layer.borderColor = UIColor.orange.cgColor
         imageProfileImageView.layer.borderWidth = 1
-        imageProfileImageView.layer.cornerRadius = imageProfileImageView.frame.size.width / 3
+        imageProfileImageView.layer.cornerRadius = imageProfileImageView.frame.size.width / 2
         imageProfileImageView.clipsToBounds = true
     }
     
@@ -138,7 +140,7 @@ extension ProfileViewController: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldDidBeginEditing")
-        textField.layer.borderWidth = 3
+        textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.orange.cgColor
     }
     

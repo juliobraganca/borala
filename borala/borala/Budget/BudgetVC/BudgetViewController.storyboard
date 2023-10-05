@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="C3c-kI-dhm">
-                                <rect key="frame" x="2" y="46" width="391" height="760"/>
+                                <rect key="frame" x="2" y="0.0" width="391" height="860"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orçamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0F-a8-RQV">
-                                <rect key="frame" x="26" y="108" width="116" height="27.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Orçamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0F-a8-RQV">
+                                <rect key="frame" x="26" y="79" width="116" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Cidade - Estado " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaH-P0-bdr">
-                                <rect key="frame" x="26" y="139.66666666666666" width="127" height="20.333333333333343"/>
+                                <rect key="frame" x="26" y="111.66666666666667" width="127" height="48.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,7 +112,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="centerX" secondItem="C3c-kI-dhm" secondAttribute="centerX" id="0QZ-D3-3P7"/>
-                            <constraint firstItem="C3c-kI-dhm" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="1Au-Te-WpO"/>
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="leading" secondItem="Fmo-gd-KiO" secondAttribute="leading" id="1UW-Kg-gra"/>
                             <constraint firstItem="Fmo-gd-KiO" firstAttribute="baseline" secondItem="5EK-KW-CVi" secondAttribute="baseline" id="2RZ-RA-zDV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ht1-ft-YPd" secondAttribute="bottom" constant="16" id="7qk-Gf-eH4"/>
@@ -130,8 +129,7 @@
                             <constraint firstItem="Ht1-ft-YPd" firstAttribute="leading" secondItem="4Y1-ou-B8z" secondAttribute="trailing" constant="174" id="SSg-Ws-wnz"/>
                             <constraint firstItem="Fmo-gd-KiO" firstAttribute="centerY" secondItem="5EK-KW-CVi" secondAttribute="centerY" id="TUb-CF-GKu"/>
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="top" secondItem="MZq-qG-I1N" secondAttribute="bottom" constant="52" id="YhI-cU-pNT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="C3c-kI-dhm" secondAttribute="bottom" constant="12" id="aX9-M0-YKx"/>
-                            <constraint firstItem="I0F-a8-RQV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="49" id="ayg-b1-BuK"/>
+                            <constraint firstItem="I0F-a8-RQV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ayg-b1-BuK"/>
                             <constraint firstItem="bYr-zu-EjX" firstAttribute="leading" secondItem="J68-Rw-n0j" secondAttribute="trailing" id="cZJ-Hx-gh2"/>
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="leading" secondItem="4Y1-ou-B8z" secondAttribute="leading" id="eKs-9f-LMs"/>
                             <constraint firstItem="bYr-zu-EjX" firstAttribute="top" secondItem="BwV-Vc-OTB" secondAttribute="bottom" constant="25" id="ihJ-H8-g8g"/>
@@ -143,6 +141,7 @@
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="leading" secondItem="I0F-a8-RQV" secondAttribute="leading" id="t9u-P4-BTw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BwV-Vc-OTB" secondAttribute="trailing" constant="24" id="tYT-3A-ptd"/>
                             <constraint firstItem="BwV-Vc-OTB" firstAttribute="centerX" secondItem="MZq-qG-I1N" secondAttribute="centerX" id="w4g-Od-DwE"/>
+                            <constraint firstItem="C3c-kI-dhm" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="xdp-mZ-gCI"/>
                             <constraint firstItem="J68-Rw-n0j" firstAttribute="leading" secondItem="u6H-N4-roI" secondAttribute="trailing" constant="13.33" id="ykO-Mg-PiE"/>
                         </constraints>
                     </view>

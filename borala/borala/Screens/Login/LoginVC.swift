@@ -56,6 +56,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         emailTextField.keyboardType = .emailAddress
         emailTextField.delegate = self
         
+        
         passwordTextField.placeholder = "Digite sua senha"
         passwordTextField.delegate = self
         
