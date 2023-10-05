@@ -46,10 +46,11 @@ class HomeVC: UIViewController {
         tabBar.tintColor = Color.tangerine
         tabBar.isTranslucent = true
 //        tabBar.backgroundColor = UIColor.clear
+        let house = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         let map = UITabBarItem(title: "Map", image: UIImage(systemName: "mappin.and.ellipse"), tag: 0)
         let budget = UITabBarItem(title: "Orçamento", image: UIImage(systemName: "dollarsign"), tag: 0)
         let profile = UITabBarItem(title: "Conta", image: UIImage(systemName: "person"), tag: 0)
-        tabBar.items = [map, budget, profile]
+        tabBar.items = [house, map, budget, profile]
     }
     
     
