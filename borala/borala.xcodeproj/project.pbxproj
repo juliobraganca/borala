@@ -28,6 +28,8 @@
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
 		D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */; };
 		D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187532ACDDB3300C66A2B /* ProfileViewController.swift */; };
+		D92187582ACE483700C66A2B /* BudgetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187572ACE483700C66A2B /* BudgetViewController.storyboard */; };
+		D921875A2ACE484D00C66A2B /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187592ACE484D00C66A2B /* BudgetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		D92187532ACDDB3300C66A2B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D92187572ACE483700C66A2B /* BudgetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetViewController.storyboard; sourceTree = "<group>"; };
+		D92187592ACE484D00C66A2B /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				D92187562ACE47DC00C66A2B /* Budget */,
 				D92187502ACDDAEE00C66A2B /* Profile */,
 				363EBA672ABCEE5E004AF499 /* Model */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
@@ -190,6 +195,15 @@
 				D92187532ACDDB3300C66A2B /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		D92187562ACE47DC00C66A2B /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
+				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
+			);
+			path = Budget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +268,7 @@
 				363EBA5E2ABCB24F004AF499 /* HomeCollectionViewCell.xib in Resources */,
 				367458C52A965ABA008E77D8 /* Assets.xcassets in Resources */,
 				D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */,
+				D92187582ACE483700C66A2B /* BudgetViewController.storyboard in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
 				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
 				D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */,
@@ -275,6 +290,7 @@
 				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
+				D921875A2ACE484D00C66A2B /* BudgetViewController.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
 				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
