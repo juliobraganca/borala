@@ -84,11 +84,13 @@
 		360D4BED2AC4C5810089C067 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				36A51F9F2ACF07BF00A63521 /* Maps */,
 				D63023942ABBC3B0001092C1 /* Login */,
 				D63023952ABBC3CC001092C1 /* Register */,
 				363EBA432ABC78DF004AF499 /* ForgotPassword */,
 				363EBA422ABC788E004AF499 /* Home */,
+				36A51F9F2ACF07BF00A63521 /* Maps */,
+				D92187562ACE47DC00C66A2B /* Budget */,
+				D92187502ACDDAEE00C66A2B /* Profile */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -166,8 +168,6 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
-				D92187562ACE47DC00C66A2B /* Budget */,
-				D92187502ACDDAEE00C66A2B /* Profile */,
 				363EBA672ABCEE5E004AF499 /* Model */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
 				363EBA512ABC7E43004AF499 /* Utilities */,
@@ -214,7 +214,8 @@
 				D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */,
 				D92187532ACDDB3300C66A2B /* ProfileViewController.swift */,
 			);
-			path = Profile;
+			name = Profile;
+			path = ../Profile;
 			sourceTree = "<group>";
 		};
 		D92187562ACE47DC00C66A2B /* Budget */ = {
@@ -226,7 +227,8 @@
 				D980C0DD2ACE5D0900092AA6 /* Models */,
 				D980C0DC2ACE5C7D00092AA6 /* BudgetVC */,
 			);
-			path = Budget;
+			name = Budget;
+			path = ../Budget;
 			sourceTree = "<group>";
 		};
 		D980C0DC2ACE5C7D00092AA6 /* BudgetVC */ = {
