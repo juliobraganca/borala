@@ -30,6 +30,9 @@
 		D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187532ACDDB3300C66A2B /* ProfileViewController.swift */; };
 		D92187582ACE483700C66A2B /* BudgetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92187572ACE483700C66A2B /* BudgetViewController.storyboard */; };
 		D921875A2ACE484D00C66A2B /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187592ACE484D00C66A2B /* BudgetViewController.swift */; };
+		D92187622ACE4DEC00C66A2B /* Cost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187612ACE4DEC00C66A2B /* Cost.swift */; };
+		D92187672ACE4E7900C66A2B /* ExpensesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92187652ACE4E7900C66A2B /* ExpensesTableViewCell.swift */; };
+		D92187682ACE4E7900C66A2B /* ExpensesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92187662ACE4E7900C66A2B /* ExpensesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		D92187532ACDDB3300C66A2B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D92187572ACE483700C66A2B /* BudgetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetViewController.storyboard; sourceTree = "<group>"; };
 		D92187592ACE484D00C66A2B /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		D92187612ACE4DEC00C66A2B /* Cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cost.swift; sourceTree = "<group>"; };
+		D92187652ACE4E7900C66A2B /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
+		D92187662ACE4E7900C66A2B /* ExpensesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,10 +206,37 @@
 		D92187562ACE47DC00C66A2B /* Budget */ = {
 			isa = PBXGroup;
 			children = (
-				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
-				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
+				D921876A2ACE4EF700C66A2B /* BudgetVC */,
+				D92187602ACE4DD400C66A2B /* Model */,
+				D921875F2ACE4D7900C66A2B /* ExpensesTableViewCell.swift */,
 			);
 			path = Budget;
+			sourceTree = "<group>";
+		};
+		D921875F2ACE4D7900C66A2B /* ExpensesTableViewCell.swift */ = {
+			isa = PBXGroup;
+			children = (
+				D92187652ACE4E7900C66A2B /* ExpensesTableViewCell.swift */,
+				D92187662ACE4E7900C66A2B /* ExpensesTableViewCell.xib */,
+			);
+			path = ExpensesTableViewCell.swift;
+			sourceTree = "<group>";
+		};
+		D92187602ACE4DD400C66A2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D92187612ACE4DEC00C66A2B /* Cost.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D921876A2ACE4EF700C66A2B /* BudgetVC */ = {
+			isa = PBXGroup;
+			children = (
+				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
+				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
+			);
+			path = BudgetVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +305,7 @@
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
 				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
 				D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */,
+				D92187682ACE4E7900C66A2B /* ExpensesTableViewCell.xib in Resources */,
 				363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,12 +325,14 @@
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
 				D921875A2ACE484D00C66A2B /* BudgetViewController.swift in Sources */,
+				D92187672ACE4E7900C66A2B /* ExpensesTableViewCell.swift in Sources */,
 				363EBA502ABC7D99004AF499 /* UITextField+Ext.swift in Sources */,
 				363EBA5D2ABCB24F004AF499 /* HomeCollectionViewCell.swift in Sources */,
 				367458BC2A965AB9008E77D8 /* AppDelegate.swift in Sources */,
 				363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */,
 				363EBA692ABCEE68004AF499 /* Places.swift in Sources */,
 				367458BE2A965AB9008E77D8 /* SceneDelegate.swift in Sources */,
+				D92187622ACE4DEC00C66A2B /* Cost.swift in Sources */,
 				363EBA532ABC7E5C004AF499 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
