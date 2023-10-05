@@ -47,7 +47,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     
-    
     func configElements() {
         emailTextField.placeholder = "Digite seu e-mail"
         emailTextField.keyboardType = .emailAddress

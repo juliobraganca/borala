@@ -9,7 +9,7 @@ import UIKit
 
 class BudgetViewController: UIViewController {
     
-    @IBOutlet weak var backButton: UIButton!
+    //@IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -40,13 +40,13 @@ class BudgetViewController: UIViewController {
         configElementsBackground()
         ConfigElementesSppents()
         configElementsTableView()
-        resultLabel.text = " R$ \(newresult)"
+        //resultLabel.text = " R$ \(newresult)"
     }
     
     
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        print("Voltar")
-    }
+//    @IBAction func tappedBackButton(_ sender: UIButton) {
+//        print("Voltar")
+//    }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
         addNewItem()
@@ -78,10 +78,6 @@ class BudgetViewController: UIViewController {
         let newItem = Cost(description: "", value: "", check: true)
         list.append(newItem)
         budgetTableView.reloadData()
-        
-       // func configElementsTextField(){
-            
-       // }
         
         
     }

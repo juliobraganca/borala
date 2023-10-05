@@ -59,8 +59,8 @@
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		D92187512ACDDB1B00C66A2B /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		D92187532ACDDB3300C66A2B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D92187572ACE483700C66A2B /* BudgetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BudgetViewController.storyboard; sourceTree = "<group>"; };
-		D92187592ACE484D00C66A2B /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		D92187572ACE483700C66A2B /* BudgetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = BudgetViewController.storyboard; path = BudgetVC/BudgetViewController.storyboard; sourceTree = "<group>"; };
+		D92187592ACE484D00C66A2B /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetViewController.swift; path = BudgetVC/BudgetViewController.swift; sourceTree = "<group>"; };
 		D980C0DE2ACE5D2A00092AA6 /* Cost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cost.swift; sourceTree = "<group>"; };
 		D980C0E52ACE5E6E00092AA6 /* ExpensesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableViewCell.swift; sourceTree = "<group>"; };
 		D980C0E62ACE5E6E00092AA6 /* ExpensesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesTableViewCell.xib; sourceTree = "<group>"; };
@@ -206,6 +206,8 @@
 		D92187562ACE47DC00C66A2B /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
+				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
 				D980C0E02ACE5D8A00092AA6 /* CellExpenses */,
 				D980C0DD2ACE5D0900092AA6 /* Models */,
 				D980C0DC2ACE5C7D00092AA6 /* BudgetVC */,
@@ -216,8 +218,6 @@
 		D980C0DC2ACE5C7D00092AA6 /* BudgetVC */ = {
 			isa = PBXGroup;
 			children = (
-				D92187592ACE484D00C66A2B /* BudgetViewController.swift */,
-				D92187572ACE483700C66A2B /* BudgetViewController.storyboard */,
 			);
 			path = BudgetVC;
 			sourceTree = "<group>";

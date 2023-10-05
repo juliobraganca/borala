@@ -39,6 +39,8 @@ class HomeVC: UIViewController {
         view.setBackground()
     }
     
+   
+    
     
     func configureTabBar() {
         tabBar.tintColor = Color.tangerine

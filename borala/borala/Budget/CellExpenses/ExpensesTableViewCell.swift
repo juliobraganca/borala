@@ -10,18 +10,17 @@ import UIKit
 class ExpensesTableViewCell: UITableViewCell {
     
     
+   
     @IBOutlet weak var chackButton: UIButton!
     
     @IBOutlet weak var descriptionTextField: UITextField!
-    
+ 
     @IBOutlet weak var valueTextField: UITextField!
-    
     
     static let identfier: String = "ExpensesTableViewCell"
     
     static func nib() -> UINib {
         return UINib(nibName: identfier, bundle: nil)
-        
         
     }
     
