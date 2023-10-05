@@ -28,7 +28,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.tintColor = Color.tangerine
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
@@ -85,13 +86,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
-        textField.layer.borderColor = UIColor.orange.cgColor
+        textField.layer.borderColor = Color.tangerine.cgColor
         
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
-          textField.layer.borderColor = UIColor.gray.cgColor
+        textField.layer.borderColor = Color.neutral.cgColor
       }
 
 

@@ -28,7 +28,7 @@ class TabBarController: UITabBarController {
         let maps: UINavigationController = {
             let vc = UIStoryboard(name: "MapsVC", bundle: nil).instantiateViewController(withIdentifier: "MapsVC") as? MapsVC
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "Maps", image: UIImage(systemName: "mappin.and.ellipse"), tag: 1)
+            nav.tabBarItem = UITabBarItem(title: "Mapa", image: UIImage(systemName: "mappin.and.ellipse"), tag: 1)
             return nav
         }()
         

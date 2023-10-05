@@ -92,6 +92,7 @@
 		360D4BED2AC4C5810089C067 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */,
 				369824592ACF11BB00AD0ABC /* AddCity */,
 				D63023942ABBC3B0001092C1 /* Login */,
 				D63023952ABBC3CC001092C1 /* Register */,
@@ -187,7 +188,6 @@
 				367458C42A965ABA008E77D8 /* Assets.xcassets */,
 				367458C62A965ABA008E77D8 /* LaunchScreen.storyboard */,
 				367458C92A965ABA008E77D8 /* Info.plist */,
-				D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */,
 			);
 			path = borala;
 			sourceTree = "<group>";

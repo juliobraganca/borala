@@ -32,7 +32,8 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
-        self.navigationController?.pushViewController(TabBarController(), animated: true)
+//        self.navigationController?.pushViewController(TabBarController(), animated: true)
+        self.navigationController?.pushViewController(LoginVC(), animated: true)
         
     }
     
