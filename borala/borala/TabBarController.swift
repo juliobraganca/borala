@@ -21,28 +21,28 @@ class TabBarController: UITabBarController {
         let home: UINavigationController = {
             let vc = UIStoryboard(name: "HomeVC", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as? HomeVC
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "HomeVC", image: UIImage(systemName: "house"), tag: 0)
+            nav.tabBarItem = UITabBarItem(title: "Roteiros", image: UIImage(systemName: "house"), tag: 0)
             return nav
         }()
         
         let maps: UINavigationController = {
             let vc = UIStoryboard(name: "MapsVC", bundle: nil).instantiateViewController(withIdentifier: "MapsVC") as? MapsVC
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "MapsVC", image: UIImage(systemName: "mappin.and.ellipse"), tag: 1)
+            nav.tabBarItem = UITabBarItem(title: "Maps", image: UIImage(systemName: "mappin.and.ellipse"), tag: 1)
             return nav
         }()
         
         let budget: UINavigationController = {
             let vc = UIStoryboard(name: "BudgetViewController", bundle: nil).instantiateViewController(withIdentifier: "BudgetViewController") as? BudgetViewController
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "BudgetViewController", image: UIImage(systemName: "dollarsign"), tag: 2)
+            nav.tabBarItem = UITabBarItem(title: "Orçamento", image: UIImage(systemName: "dollarsign"), tag: 2)
             return nav
         }()
         
         let profile: UINavigationController = {
             let vc = UIStoryboard(name: "ProfileViewController", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController
             let nav = UINavigationController(rootViewController: vc ?? UIViewController())
-            nav.tabBarItem = UITabBarItem(title: "ProfileViewController", image: UIImage(systemName: "person"), tag: 3 )
+            nav.tabBarItem = UITabBarItem(title: "Perfil", image: UIImage(systemName: "person"), tag: 3 )
             return nav
         }()
         

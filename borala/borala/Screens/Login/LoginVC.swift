@@ -24,13 +24,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
 
         self.navigationController?.pushViewController(TabBarController(), animated: true)
-        //}
+      
     }
     
     

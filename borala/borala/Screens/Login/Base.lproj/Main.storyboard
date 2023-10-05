@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWI-Rg-HIW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWI-Rg-HIW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuN-22-eAF">
-                                <rect key="frame" x="30" y="587" width="333" height="35"/>
+                                <rect key="frame" x="30" y="591" width="333" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -34,14 +35,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="gmailLogin" translatesAutoresizingMaskIntoConstraints="NO" id="KeB-Qw-uiP">
-                                <rect key="frame" x="202" y="662" width="61" height="47"/>
+                                <rect key="frame" x="202" y="666" width="61" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="QBy-0h-cGm"/>
                                     <constraint firstAttribute="width" constant="61" id="We5-uL-KMT"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="facebookLogin" translatesAutoresizingMaskIntoConstraints="NO" id="IuX-2P-clD">
-                                <rect key="frame" x="130" y="662" width="53" height="48"/>
+                                <rect key="frame" x="130" y="666" width="53" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="07D-xI-JBX"/>
                                     <constraint firstAttribute="height" constant="48" id="d0H-7j-T04"/>
@@ -58,7 +59,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7P-7k-o7m">
-                                <rect key="frame" x="30" y="539" width="119" height="20"/>
+                                <rect key="frame" x="30" y="541" width="119" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="MLv-hx-CHk"/>
                                 </constraints>
@@ -69,7 +70,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVt-pg-XMl">
-                                <rect key="frame" x="215" y="539" width="148" height="20"/>
+                                <rect key="frame" x="215" y="541" width="148" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0hi-l4-VEG"/>
                                 </constraints>
@@ -85,29 +86,28 @@
                         <constraints>
                             <constraint firstItem="IuX-2P-clD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="2OY-HY-S6n"/>
                             <constraint firstAttribute="bottom" secondItem="Uqq-ur-9Dx" secondAttribute="bottom" id="6wu-tA-YOG"/>
-                            <constraint firstItem="CVt-pg-XMl" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="8" symbolic="YES" id="7VN-4f-ijy"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="88Y-8Z-EGq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuN-22-eAF" secondAttribute="trailing" constant="30" id="BpZ-LB-27T"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HGU-0W-US9"/>
-                            <constraint firstItem="A7P-7k-o7m" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="8" symbolic="YES" id="Ilq-5K-up1"/>
                             <constraint firstItem="0b0-zr-DyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Iun-Mf-bgi"/>
                             <constraint firstItem="sfE-r2-TCa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="LvC-ee-Psn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="196" id="RI3-p6-Awi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oiz-9O-rjP" secondAttribute="trailing" constant="30" id="SN2-K3-CCa"/>
                             <constraint firstItem="oiz-9O-rjP" firstAttribute="top" secondItem="0b0-zr-DyB" secondAttribute="bottom" constant="30" id="Uba-38-t4P"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V4H-0P-EAt"/>
+                            <constraint firstItem="oiz-9O-rjP" firstAttribute="leading" secondItem="0b0-zr-DyB" secondAttribute="leading" id="WJA-DS-AkO"/>
                             <constraint firstItem="IuX-2P-clD" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="40" id="apk-C6-bee"/>
                             <constraint firstItem="sfE-r2-TCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="d8O-so-0hy"/>
                             <constraint firstItem="A7P-7k-o7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dDR-Fa-DXG"/>
                             <constraint firstItem="0b0-zr-DyB" firstAttribute="top" secondItem="sfE-r2-TCa" secondAttribute="bottom" constant="60" id="eZU-Oe-dbN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0b0-zr-DyB" secondAttribute="trailing" constant="30" id="fB9-fc-4eX"/>
-                            <constraint firstItem="oiz-9O-rjP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gUF-tI-EFf"/>
+                            <constraint firstItem="A7P-7k-o7m" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="10" id="gbr-ca-Gho"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iBs-AT-HiV"/>
+                            <constraint firstItem="CVt-pg-XMl" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="10" id="igj-4t-xEc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KeB-Qw-uiP" secondAttribute="trailing" constant="130" id="nNz-EU-c1S"/>
+                            <constraint firstItem="oiz-9O-rjP" firstAttribute="trailing" secondItem="0b0-zr-DyB" secondAttribute="trailing" id="nh4-7B-JGY"/>
                             <constraint firstItem="KeB-Qw-uiP" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="40" id="niv-kb-xy1"/>
+                            <constraint firstItem="TuN-22-eAF" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="60" id="nwV-1h-MvX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVt-pg-XMl" secondAttribute="trailing" constant="30" id="oqe-1Y-mxI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfE-r2-TCa" secondAttribute="trailing" constant="40" id="yZZ-ta-9V1"/>
-                            <constraint firstItem="CVt-pg-XMl" firstAttribute="leading" secondItem="A7P-7k-o7m" secondAttribute="trailing" constant="66" id="zIA-ae-DVR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MsK-e9-1Om"/>
