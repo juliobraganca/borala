@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterVC: UIViewController, UITextFieldDelegate {
     
@@ -21,19 +22,28 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var registerButton: UIButton!
     
+    var auth: Auth?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.auth = Auth.auth()
         configElements()
-    }
-    
-    @IBAction func tappedBackwardButton(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
-//        self.navigationController?.pushViewController(TabBarController(), animated: true)
-        self.navigationController?.pushViewController(LoginVC(), animated: true)
+        let email:String = registerEmailTextField.text ?? ""
+        let password:String = registerPasswordTextField.text ?? ""
+        
+        auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
+            if error != nil {
+                print("Falha ao cadastar")
+            }else{
+                print("Sucesso ao Cadastrar")
+            }
+        })
+        
+
         
     }
     
