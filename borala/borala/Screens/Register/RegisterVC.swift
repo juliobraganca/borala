@@ -39,12 +39,12 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             if error != nil {
                 print("Falha ao cadastar")
             }else{
-                print("Sucesso ao Cadastrar")
-            }
+                if self.registerEmailTextField.validateEmail() && self.registerEmailTextField.validateEmail() {
+                    print("Sucesso ao Cadastrar")
+                }else{
+                    print("Emial ou senha invalidos")
+                }}
         })
-        
-
-        
     }
     
     
@@ -68,15 +68,31 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         registerButton.setTitle("Cadastrar", for: .normal)
         
     }
-
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = UIColor.orange.cgColor
     }
-   
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
-          textField.layer.borderColor = UIColor.gray.cgColor
-      }
+        textField.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+}
 
+
+extension UITextField {
+    
+    func validateEmail() -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return validateRegex.evaluate (with: self.text)
+    }
+    func validadePassword() -> Bool {
+        let passwordRegex = ".{6,}"
+        let validateRegex = NSPredicate (format: "SELF MATCHES %0", passwordRegex)
+        return validateRegex.evaluate(with: self.text)
+        
+    }
 }
