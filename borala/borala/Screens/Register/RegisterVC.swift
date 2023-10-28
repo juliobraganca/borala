@@ -38,17 +38,16 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         let repeatPassword: String = repeatPasswordTextField.text ?? ""
         
         if password != repeatPassword {
-            print(" As senhas são diferentes")
-            
+            self.showAlert(title: "Ops! Parece que as senhas não correspondem. Revise e tente outra vez.")
+
         }else {
             
             auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
-
                        if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
-                            print("Sucesso ao Cadastrar")
-                    
+                           self.showAlert(title: "Parabéns, seu cadastro foi concluído com sucesso.")
+                             
                        }else{
-                           print("falha ao cadastrar")
+                           self.showAlert(title: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
                        }
             })
         }
@@ -86,8 +85,13 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.gray.cgColor
     }
     
+    func showAlert(title:String) {
+        let alertcontroller: UIAlertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let okButton: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+        alertcontroller.addAction(okButton)
+        self.present(alertcontroller,animated: true, completion: nil)
+        }
 }
-
 
 extension UITextField {
     
