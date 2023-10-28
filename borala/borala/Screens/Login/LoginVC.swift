@@ -40,7 +40,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         self.auth?.signIn(withEmail: email, password: password) { (usuario, error) in
             if error != nil {
-                print("Dados incorretos")
+                self.showAllert(title: "Atenção", message: "Verifique se os dados inseridos estão corretos e tente novamente")
+                print("Dados incorretos! ")
             }else{
                 print("Login com sucesso")
                 self.navigationController?.pushViewController(TabBarController(), animated: true)
@@ -48,7 +49,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
  
     }
-    
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         let registerScreen = UIStoryboard(name: "RegisterVC", bundle: nil).instantiateViewController(withIdentifier: "RegisterVC") as? RegisterVC
@@ -105,7 +105,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderWidth = 0
         textField.layer.borderColor = Color.neutral.cgColor
       }
-
+    
+    func showAllert(title:String, message:String){
+        let alertErroLogin: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okButton: UIAlertAction = UIAlertAction(title:"OK", style: .default)
+        alertErroLogin.addAction(okButton)
+        self.present(alertErroLogin, animated: true, completion: nil)
+        
+    }
 
 }
+
+
 
