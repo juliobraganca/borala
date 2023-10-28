@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Firebase
-
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
@@ -21,13 +19,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var enterButton: UIButton!
     
-    var auth: Auth?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
-        self.auth = Auth.auth()
-        
         
     }
     
@@ -37,18 +33,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        
-        let email:String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        self.auth?.signIn(withEmail: email, password: password) { (usuario, error) in
-            if error != nil {
-                print("Dados incorretos")
-            }else{
-                print("Login com sucesso")
-                self.navigationController?.pushViewController(TabBarController(), animated: true)
-            }
-        }
+
+        self.navigationController?.pushViewController(TabBarController(), animated: true)
+      
     }
     
     
