@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class RegisterVC: UIViewController, UITextFieldDelegate {
     
@@ -32,21 +33,27 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
-        let email:String = registerEmailTextField.text ?? ""
-        let password:String = registerPasswordTextField.text ?? ""
+        let email: String = registerEmailTextField.text ?? ""
+        let password: String = registerPasswordTextField.text ?? ""
+        let repeatPassword: String = repeatPasswordTextField.text ?? ""
         
-        auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
-            if error != nil {
-                print("Falha ao cadastar")
-            }else{
-                if self.registerEmailTextField.validateEmail() && self.registerEmailTextField.validateEmail() {
-                    print("Sucesso ao Cadastrar")
-                }else{
-                    print("Emial ou senha invalidos")
-                }}
-        })
+        if password != repeatPassword {
+            print(" As senhas são diferentes")
+            
+        }else {
+            
+            auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
+
+                       if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
+                            print("Sucesso ao Cadastrar")
+                    
+                       }else{
+                           print("falha ao cadastrar")
+                       }
+            })
+        }
     }
-    
+  
     
     func configElements() {
         
@@ -91,7 +98,7 @@ extension UITextField {
     }
     func validadePassword() -> Bool {
         let passwordRegex = ".{6,}"
-        let validateRegex = NSPredicate (format: "SELF MATCHES %0", passwordRegex)
+        let validateRegex = NSPredicate (format: "SELF MATCHES %@", passwordRegex)
         return validateRegex.evaluate(with: self.text)
         
     }
