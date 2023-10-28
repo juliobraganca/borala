@@ -38,21 +38,22 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         let repeatPassword: String = repeatPasswordTextField.text ?? ""
         
         if password != repeatPassword {
-            self.showAlert(title: "Ops! Parece que as senhas não correspondem. Revise e tente outra vez.")
-
+            
+            self.showAlert(title: "Erro!" , message: "Ops! Parece que as senhas não correspondem. Revise e tente outra vez.")
+            
         }else {
             
             auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
-                       if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
-                           self.showAlert(title: "Parabéns, seu cadastro foi concluído com sucesso.")
-                             
-                       }else{
-                           self.showAlert(title: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
-                       }
+                if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
+                    self.ShowAlertReturnLogin(title: "Parabéns, seu cadastro foi concluído com sucesso.", message: "Clique em OK para ser direcionado ao login!")
+           
+                }else{
+                    self.showAlert(title: "Erro", message: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
+                }
             })
         }
     }
-  
+    
     
     func configElements() {
         
@@ -85,12 +86,27 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.gray.cgColor
     }
     
-    func showAlert(title:String) {
-        let alertcontroller: UIAlertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+    func showAlert(title:String, message: String) {
+        let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton: UIAlertAction = UIAlertAction(title: "OK", style: .default)
-        alertcontroller.addAction(okButton)
-        self.present(alertcontroller,animated: true, completion: nil)
+        alertController.addAction(okButton)
+        self.present(alertController,animated: true, completion: nil)
+    }
+    
+    func ShowAlertReturnLogin(title: String, message: String){
+        let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertControllerReturnLogin: UIAlertAction = UIAlertAction(title: "OK", style: .default) {(action) in
+            self.redirectForLogin()
         }
+        alertController.addAction(alertControllerReturnLogin)
+        self.present(alertController,animated: true, completion: nil)
+    }
+    
+    func redirectForLogin(){
+        if let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
+            self.navigationController?.pushViewController(loginVC, animated: true)
+        }
+    }
 }
 
 extension UITextField {
