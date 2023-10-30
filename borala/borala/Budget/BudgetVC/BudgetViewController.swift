@@ -37,7 +37,7 @@ class BudgetViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configElementsBackground()
+//        configElementsBackground()
         ConfigElementesSppents()
         configElementsTableView()
         //resultLabel.text = " R$ \(newresult)"
@@ -57,11 +57,11 @@ class BudgetViewController: UIViewController {
         print("Somar")
     }
     
-    func configElementsBackground(){
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.contentMode = .scaleToFill
-    }
-    
+//    func configElementsBackground(){
+//        backgroundImageView.image = UIImage(named: "background")
+//        backgroundImageView.contentMode = .scaleToFill
+//    }
+//
     
     func ConfigElementesSppents(){
         sppentsImageView.image = UIImage(named: "spents")

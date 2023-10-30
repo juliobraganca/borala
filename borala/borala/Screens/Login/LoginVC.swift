@@ -68,18 +68,14 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         emailTextField.keyboardType = .emailAddress
         emailTextField.delegate = self
         
-        
         passwordTextField.placeholder = "Digite sua senha"
         passwordTextField.delegate = self
         
         registerGreyButton.setTitle("Cadastre-se", for: .normal)
         registerGreyButton.setTitleColor(UIColor.black, for: .normal)
-//    
-        
         
         forgotPasswordGreyButton.setTitle("Esqueci a senha", for: .normal)
         forgotPasswordGreyButton.setTitleColor(UIColor.black, for: .normal)
-//
 
         enterButton.setTitle("Entrar", for: .normal)
         enterButton.tintColor = UIColor.black

@@ -9,7 +9,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var imageProfileImageView: UIImageView!
     
@@ -25,8 +24,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var editProfileButton: UIButton!
@@ -36,7 +33,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configElementsBackground()
+//        configElementsBackground()
         configElementsTextfield()
         configElementsButtons()
         configElementsImageProfile()
@@ -48,9 +45,6 @@ class ProfileViewController: UIViewController {
         print("Edit profile")
     }
     
-    @IBAction func tappedBackButton(_ sender: UIButton) {
-        print("Voltar")
-    }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         print("Salvando")
@@ -67,10 +61,10 @@ class ProfileViewController: UIViewController {
         print("Captura foto")
     }
     
-    func configElementsBackground(){
-        backgroundImageView.image = UIImage(named: "background")
-        backgroundImageView.contentMode = .scaleAspectFill
-    }
+//    func configElementsBackground(){
+//        backgroundImageView.image = UIImage(named: "background")
+//        backgroundImageView.contentMode = .scaleAspectFill
+//    }
     
     func configElementsTextfield(){
         
@@ -120,13 +114,14 @@ class ProfileViewController: UIViewController {
 //        editProfileButton.clipsToBounds = true
         
         saveButton.setupButton(title: "Salvar", isEnabled: true)
-        editProfileButton.setupButton(title: "Edit. Perfil", isEnabled: true)
+        editProfileButton.setupButton(title: "Editar Perfil", isEnabled: true)
+        
             }
     
     
     func configElementsImageProfile(){
         imageProfileImageView.image = UIImage(systemName: "person.circle.fill")
-        imageProfileImageView.contentMode = .scaleAspectFill
+        imageProfileImageView.contentMode = .scaleAspectFit
         imageProfileImageView.layer.borderColor = UIColor.orange.cgColor
         imageProfileImageView.layer.borderWidth = 1
         imageProfileImageView.layer.cornerRadius = imageProfileImageView.frame.size.width / 2
