@@ -82,8 +82,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 //
 
         enterButton.setTitle("Entrar", for: .normal)
-//        enterButton.tintColor = Color.tangerine
-        enterButton.backgroundColor = UIColor.black
+        enterButton.tintColor = UIColor.black
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -106,6 +105,3 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
 
 }
-
-
-

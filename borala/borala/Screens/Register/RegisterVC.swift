@@ -58,6 +58,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     func configElements() {
         
         newAccountLabel.text = "Nova Conta"
+        newAccountLabel.textColor = UIColor.black
         
         nameTextField.placeholder = "Digite seu nome"
         nameTextField.delegate = self
@@ -73,6 +74,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         repeatPasswordTextField.delegate = self
         
         registerButton.setTitle("Cadastrar", for: .normal)
+        registerButton.tintColor = UIColor.black
         
     }
     
