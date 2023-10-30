@@ -70,6 +70,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         passwordTextField.placeholder = "Digite sua senha"
         passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
         
         registerGreyButton.setTitle("Cadastre-se", for: .normal)
         registerGreyButton.setTitleColor(UIColor.black, for: .normal)

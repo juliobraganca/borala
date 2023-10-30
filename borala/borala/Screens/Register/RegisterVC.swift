@@ -44,11 +44,15 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         }else {
             
             auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
-                if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
+               
+                if error != nil {
+                    self.showAlert(title: "Erro!", message: "Email já cadastrado ou falha de conexão!")
+                }
+                else if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
                     self.ShowAlertReturnLogin(title: "Parabéns, seu cadastro foi concluído com sucesso.", message: "Clique em OK para ser direcionado ao login!")
            
                 }else{
-                    self.showAlert(title: "Erro", message: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
+                    self.showAlert(title: "Erro!", message: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
                 }
             })
         }
@@ -69,9 +73,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         
         registerPasswordTextField.placeholder = "Digite uma senha"
         registerPasswordTextField.delegate = self
+        registerPasswordTextField.isSecureTextEntry = true
         
         repeatPasswordTextField.placeholder = "Repita a senha"
         repeatPasswordTextField.delegate = self
+        repeatPasswordTextField.isSecureTextEntry = true
         
         registerButton.setTitle("Cadastrar", for: .normal)
         registerButton.tintColor = UIColor.black
