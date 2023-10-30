@@ -28,16 +28,16 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureVC()
+//        configureVC()
 //        configureTabBar()
         configureCollectionView()
         configureButton()
     }
     
     
-    func configureVC() {
-        view.setBackground()
-    }
+//    func configureVC() {
+//        view.setBackground()
+//    }
     
     
     func configureCollectionView() {
