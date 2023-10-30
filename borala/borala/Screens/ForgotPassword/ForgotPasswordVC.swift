@@ -16,16 +16,16 @@ class ForgotPasswordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureVC()
+//        configureVC()
         configureImageView()
         configureTextField()
         configureButton()
     }
     
     
-    func configureVC() {
-        view.setBackground()
-    }
+//    func configureVC() {
+//        view.setBackground()
+//    }
     
     
     func configureImageView() {
@@ -34,11 +34,17 @@ class ForgotPasswordVC: UIViewController {
     
     
     func configureTextField() {
-        emailTextField.setupTextField(placeholder: "Insira seu email", delegate: self)
+//        emailTextField.setupTextField(placeholder: "Insira seu email", delegate: self)
+        emailTextField.placeholder = "Digite seu email"
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.delegate = self
+        
     }
     
     
     func configureButton() {
+        confirmButton.setTitle("Cadastrar", for: .normal)
+        confirmButton.tintColor = UIColor.black
         confirmButton.setupButton(title: "Confirmar", isEnabled: false)
     }
     
