@@ -91,7 +91,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 return
             }
             
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+            _ = GoogleAuthProvider.credential(withIDToken: idToken,
                                                            accessToken: user.accessToken.tokenString)
             
             self.navigationController?.pushViewController(TabBarController(), animated: true)
