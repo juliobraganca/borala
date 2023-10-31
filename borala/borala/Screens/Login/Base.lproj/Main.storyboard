@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWI-Rg-HIW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uWI-Rg-HIW">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,20 +35,6 @@
                                     <action selector="tappedEnterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aya-rz-N7w"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="gmailLogin" translatesAutoresizingMaskIntoConstraints="NO" id="KeB-Qw-uiP">
-                                <rect key="frame" x="228" y="547" width="61" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="QBy-0h-cGm"/>
-                                    <constraint firstAttribute="width" constant="61" id="We5-uL-KMT"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="facebookLogin" translatesAutoresizingMaskIntoConstraints="NO" id="IuX-2P-clD">
-                                <rect key="frame" x="125" y="547" width="53" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="53" id="07D-xI-JBX"/>
-                                    <constraint firstAttribute="height" constant="48" id="d0H-7j-T04"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-zr-DyB">
                                 <rect key="frame" x="30" y="304" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,47 +67,57 @@
                                     <action selector="tappedForgotPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvX-Sw-ngL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH1-LL-0rC">
-                                <rect key="frame" x="114" y="600" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH1-LL-0rC">
+                                <rect key="frame" x="100" y="537" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VQQ-59-WsM"/>
+                                    <constraint firstAttribute="width" constant="60" id="jUf-sV-OXS"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="facebookLogin"/>
+                                <connections>
+                                    <action selector="tappedFacebookButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yn-xf-pjF"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-xG-yvo">
-                                <rect key="frame" x="221" y="599" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-xG-yvo">
+                                <rect key="frame" x="254" y="537" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2yy-cM-O8s"/>
+                                    <constraint firstAttribute="height" constant="60" id="VNC-49-nko"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="gmailLogin"/>
+                                <connections>
+                                    <action selector="tappedGoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fg3-y5-SYh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qH1-LL-0rC" firstAttribute="centerX" secondItem="IuX-2P-clD" secondAttribute="centerX" id="1Ap-lb-u9e"/>
-                            <constraint firstItem="IuX-2P-clD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="2OY-HY-S6n"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Bd-Nd-rJl"/>
-                            <constraint firstItem="qH1-LL-0rC" firstAttribute="top" secondItem="IuX-2P-clD" secondAttribute="bottom" constant="5" id="49G-z2-Wxe"/>
                             <constraint firstAttribute="bottom" secondItem="Uqq-ur-9Dx" secondAttribute="bottom" id="6wu-tA-YOG"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="88Y-8Z-EGq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuN-22-eAF" secondAttribute="trailing" constant="30" id="BpZ-LB-27T"/>
                             <constraint firstItem="0b0-zr-DyB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Iun-Mf-bgi"/>
+                            <constraint firstItem="GlS-xG-yvo" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="30" id="J3h-fM-4fd"/>
                             <constraint firstItem="sfE-r2-TCa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="LvC-ee-Psn"/>
                             <constraint firstItem="oiz-9O-rjP" firstAttribute="top" secondItem="0b0-zr-DyB" secondAttribute="bottom" constant="30" id="Uba-38-t4P"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V4H-0P-EAt"/>
                             <constraint firstItem="oiz-9O-rjP" firstAttribute="leading" secondItem="0b0-zr-DyB" secondAttribute="leading" id="WJA-DS-AkO"/>
-                            <constraint firstItem="IuX-2P-clD" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="40" id="apk-C6-bee"/>
                             <constraint firstItem="sfE-r2-TCa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="d8O-so-0hy"/>
                             <constraint firstItem="A7P-7k-o7m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dDR-Fa-DXG"/>
+                            <constraint firstItem="qH1-LL-0rC" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="30" id="dVD-t2-hXg"/>
                             <constraint firstItem="0b0-zr-DyB" firstAttribute="top" secondItem="sfE-r2-TCa" secondAttribute="bottom" constant="50" id="eZU-Oe-dbN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0b0-zr-DyB" secondAttribute="trailing" constant="30" id="fB9-fc-4eX"/>
                             <constraint firstItem="A7P-7k-o7m" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="10" id="gbr-ca-Gho"/>
-                            <constraint firstItem="GlS-xG-yvo" firstAttribute="centerX" secondItem="KeB-Qw-uiP" secondAttribute="centerX" id="ifO-rS-I7c"/>
                             <constraint firstItem="CVt-pg-XMl" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="10" id="igj-4t-xEc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KeB-Qw-uiP" secondAttribute="trailing" constant="125" id="nNz-EU-c1S"/>
                             <constraint firstItem="oiz-9O-rjP" firstAttribute="trailing" secondItem="0b0-zr-DyB" secondAttribute="trailing" id="nh4-7B-JGY"/>
-                            <constraint firstItem="KeB-Qw-uiP" firstAttribute="top" secondItem="TuN-22-eAF" secondAttribute="bottom" constant="40" id="niv-kb-xy1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GlS-xG-yvo" secondAttribute="trailing" constant="100" id="nh6-wl-ahV"/>
                             <constraint firstItem="TuN-22-eAF" firstAttribute="top" secondItem="oiz-9O-rjP" secondAttribute="bottom" constant="70" id="nwV-1h-MvX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVt-pg-XMl" secondAttribute="trailing" constant="30" id="oqe-1Y-mxI"/>
+                            <constraint firstItem="qH1-LL-0rC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="sQS-9T-tkJ"/>
                             <constraint firstItem="Uqq-ur-9Dx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sew-ga-VbI"/>
-                            <constraint firstItem="GlS-xG-yvo" firstAttribute="top" secondItem="KeB-Qw-uiP" secondAttribute="bottom" constant="5" id="u7f-XI-BJn"/>
                             <constraint firstItem="CVt-pg-XMl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A7P-7k-o7m" secondAttribute="trailing" constant="8" symbolic="YES" id="xdZ-mY-AAQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sfE-r2-TCa" secondAttribute="trailing" constant="40" id="yZZ-ta-9V1"/>
                         </constraints>
