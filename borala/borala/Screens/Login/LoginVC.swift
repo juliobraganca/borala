@@ -36,7 +36,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.tintColor = Color.tangerine
     }
     
