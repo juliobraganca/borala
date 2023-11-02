@@ -67,8 +67,11 @@ class BudgetViewController: UIViewController {
         sppentsImageView.image = UIImage(named: "spents")
         sppentsImageView.contentMode = .scaleToFill
         addbudgetButton.setupButton(title: "Adicionar", isEnabled: true)
+        addbudgetButton.tintColor = UIColor.black
         sumButton.setupButton(title: "Somar", isEnabled: true)
+        sumButton.tintColor = UIColor.black
     }
+    
     func configElementsTableView(){
         budgetTableView.backgroundColor = UIColor.clear
         budgetTableView.delegate = self

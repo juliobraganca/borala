@@ -7,8 +7,12 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseCore
+import GoogleSignIn
+import FacebookLogin
 
 class LoginVC: UIViewController, UITextFieldDelegate {
+    
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -21,6 +25,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var enterButton: UIButton!
     
     var auth: Auth?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +53,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 self.navigationController?.pushViewController(TabBarController(), animated: true)
             }
         }
- 
+        
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
@@ -60,6 +66,38 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let forgotPasswordVC = UIStoryboard(name: "ForgotPasswordVC", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
         navigationController?.pushViewController(forgotPasswordVC ?? UIViewController(), animated: true)
     }
+    
+    
+    @IBAction func tappedFacebookButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func tappedGoogleButton(_ sender: Any) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+            guard error == nil else {
+                return
+            }
+            
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString
+            else {
+                return
+            }
+            
+            _ = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: user.accessToken.tokenString)
+            
+            self.navigationController?.pushViewController(TabBarController(), animated: true)
+        }
+    }
+    
     
     
     
@@ -77,7 +115,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         forgotPasswordGreyButton.setTitle("Esqueci a senha", for: .normal)
         forgotPasswordGreyButton.setTitleColor(UIColor.black, for: .normal)
-
+        
         enterButton.setTitle("Entrar", for: .normal)
         enterButton.tintColor = UIColor.black
     }
@@ -91,7 +129,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 0
         textField.layer.borderColor = Color.neutral.cgColor
-      }
+    }
     
     func showAllert(title:String, message:String){
         let alertErroLogin: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -100,5 +138,5 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.present(alertErroLogin, animated: true, completion: nil)
         
     }
-
+    
 }
