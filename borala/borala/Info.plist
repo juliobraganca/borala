@@ -4,7 +4,7 @@
 <dict>
     <key>CFBundleURLTypes</key>
     <array>
-        <dict> I
+        <dict> 
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>fb1341594086458687</string>
