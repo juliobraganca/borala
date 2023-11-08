@@ -7,16 +7,16 @@
         <dict> 
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>fb1341594086458687</string>
+                <string>fb1104101324291707</string>
                 
                 <string>com.googleusercontent.apps.236074949305-ei1b2ftskph70rjp6v5h7ss2d36u6ud7</string>
             </array>
         </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>1341594086458687</string>
+    <string>1104101324291707</string>
     <key>FacebookClientToken</key>
-    <string>83017107f1c6099c499da41e188fbc5a</string>
+    <string>50f6e6e89702de51a777699ad3146017</string>
     <key>FacebookDisplayName</key>
     <string>Borala</string>
     <key>UIApplicationSceneManifest</key>

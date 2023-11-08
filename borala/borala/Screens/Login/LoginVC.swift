@@ -25,7 +25,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var enterButton: UIButton!
     
     var auth: Auth?
-    
+    let facebookLoginButton = FBLoginButton(frame: .zero)
     
     
     override func viewDidLoad() {
@@ -69,6 +69,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func tappedFacebookButton(_ sender: Any) {
+        facebookLoginButton.delegate = self
+        facebookLoginButton.isHidden = true
+        facebookLoginButton.sendActions(for: .touchUpInside)
     }
     
     
@@ -118,6 +121,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         enterButton.setTitle("Entrar", for: .normal)
         enterButton.tintColor = UIColor.black
+        
+        facebookLoginButton.delegate = self
+        facebookLoginButton.isHidden = true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -139,4 +145,22 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
     }
     
+}
+
+
+extension LoginVC: LoginButtonDelegate {
+    
+func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+    if error != nil {
+               showAllert(title: "Atencão", message: "Erro ao logar com facebook")
+        
+            } else if result?.isCancelled == true {
+                showAllert(title: "Atencão", message: "Você cancelou o acesso pelo facebook")
+                
+            } else {
+                self.navigationController?.pushViewController(TabBarController(), animated: true)
+            }
+    }
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+    }
 }
