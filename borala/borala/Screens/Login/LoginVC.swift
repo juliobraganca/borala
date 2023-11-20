@@ -32,6 +32,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         configElements()
         self.auth = Auth.auth()
+        checkLogin()
         
     }
     
@@ -41,19 +42,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        let email:String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        self.auth?.signIn(withEmail: email, password: password) { (usuario, error) in
-            if error != nil {
-                self.showAllert(title: "Atenção", message: "Verifique se os dados inseridos estão corretos e tente novamente")
-                print("Dados incorretos! ")
-            }else{
-                print("Login com sucesso")
-                self.navigationController?.pushViewController(TabBarController(), animated: true)
-            }
-        }
-        
+        signIn()
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
@@ -61,19 +50,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(registerScreen ?? UIViewController(), animated: true)
     }
     
-    
     @IBAction func tappedForgotPasswordButton(_ sender: UIButton) {
         let forgotPasswordVC = UIStoryboard(name: "ForgotPasswordVC", bundle: nil).instantiateViewController(withIdentifier: "ForgotPasswordVC") as? ForgotPasswordVC
         navigationController?.pushViewController(forgotPasswordVC ?? UIViewController(), animated: true)
     }
-    
     
     @IBAction func tappedFacebookButton(_ sender: Any) {
         facebookLoginButton.delegate = self
         facebookLoginButton.isHidden = true
         facebookLoginButton.sendActions(for: .touchUpInside)
     }
-    
     
     @IBAction func tappedGoogleButton(_ sender: Any) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
@@ -95,14 +81,11 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             }
             
             _ = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                           accessToken: user.accessToken.tokenString)
+                                              accessToken: user.accessToken.tokenString)
             
             self.navigationController?.pushViewController(TabBarController(), animated: true)
         }
     }
-    
-    
-    
     
     func configElements() {
         emailTextField.placeholder = "Digite seu e-mail"
@@ -129,7 +112,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderWidth = 1.0
         textField.layer.borderColor = Color.tangerine.cgColor
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -142,11 +124,31 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let okButton: UIAlertAction = UIAlertAction(title:"OK", style: .default)
         alertErroLogin.addAction(okButton)
         self.present(alertErroLogin, animated: true, completion: nil)
+    }
+    func checkLogin() {
+        if AccessToken.current != nil {
+            self.navigationController?.pushViewController(TabBarController(), animated: false)
+            self.navigationController?.navigationBar.isHidden = true
+        } else {
+            facebookLoginButton.isHidden = true
+        }
+    }
+    
+
+    func signIn(){
+        let email:String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
         
+        self.auth?.signIn(withEmail: email, password: password) { (usuario, error) in
+            if error != nil {
+                self.showAllert(title: "Atenção", message: "Verifique os dados inseridos e tente novamente!")
+            }else{
+                self.navigationController?.pushViewController(TabBarController(), animated: true)
+            }
+        }
     }
     
 }
-
 
 extension LoginVC: LoginButtonDelegate {
     
