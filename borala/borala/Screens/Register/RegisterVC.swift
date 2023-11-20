@@ -9,7 +9,9 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class RegisterVC: UIViewController, UITextFieldDelegate {
+
+
+class RegisterVC: UIViewController {
     
     @IBOutlet weak var newAccountLabel: UILabel!
     
@@ -29,69 +31,112 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.auth = Auth.auth()
         configElements()
+        checkTextFields()
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        let email: String = self.registerEmailTextField.text ?? ""
+        let password: String = self.registerPasswordTextField.text ?? ""
+        auth?.createUser(withEmail:email, password: password, completion: { (Result, error) in
+            if error != nil {
+                self.showAlert(title: "Atenção", message: "Erro ao cadastrar. Verifique seus dados")
+            } else{
+                self.ShowAlertReturnLogin(title:"Parabéns", message: "Registro realizado com sucesso!")
+                
+            }
+        })
         
-        let email: String = registerEmailTextField.text ?? ""
-        let password: String = registerPasswordTextField.text ?? ""
-        let repeatPassword: String = repeatPasswordTextField.text ?? ""
-        
-        if password != repeatPassword {
-            
-            self.showAlert(title: "Erro!" , message: "Ops! Parece que as senhas não correspondem. Revise e tente outra vez.")
-            
-        }else {
-            
-            auth?.createUser(withEmail: email, password: password,completion: { (result, error) in
-               
-                if error != nil {
-                    self.showAlert(title: "Erro!", message: "Email já cadastrado ou falha de conexão!")
-                }
-                else if self.registerEmailTextField.validateEmail() && self.registerPasswordTextField.validadePassword() {
-                    self.ShowAlertReturnLogin(title: "Parabéns, seu cadastro foi concluído com sucesso.", message: "Clique em OK para ser direcionado ao login!")
-           
-                }else{
-                    self.showAlert(title: "Erro!", message: "Ops, algo deu errado durante o cadastro. Verifique se o email e a senha estão de acordo com os requisitos.")
-                }
-            })
+    }
+    func checkTextFields() {
+        nameTextField.addTarget(self, action: #selector(textFieldDidEndOnExit), for: .editingDidEndOnExit)
+    }
+    @objc func textFieldDidEndOnExit() {
+        if nameTextField.validateName() {
+            enableRegisterEmailTextField ()
         }
+        else {
+            disableRegisterEmailTextfield()
+            self.showAlert(title: "Atenção", message: "Inserir um nome com no mínimo 2 caractéries")
+        }
+    }
+    func enableRegisterEmailTextField(){
+        self.registerEmailTextField.isEnabled = true
+        let nextTag = 2
+        if let nextTextField = view.viewWithTag(nextTag) as? UITextField {
+            nextTextField.becomeFirstResponder()
+            registerEmailTextField.addTarget(self, action: #selector(ttextFieldDidEndOnExit), for: .editingDidEndOnExit)
+        }
+    }
+    func disableRegisterEmailTextfield(){
+        registerEmailTextField.isEnabled = false
     }
     
     
+    @objc func ttextFieldDidEndOnExit() {
+        if !registerEmailTextField.validateEmail() {
+            disableRegisterPasswordTextField()
+        }
+        else {
+            enableRegisterPasswordTextField()
+        }
+    }
+    func enableRegisterPasswordTextField() {
+        let nextTag = 3
+        if let nextTextField = view.viewWithTag(nextTag) as? UITextField {
+            registerPasswordTextField.isEnabled = true
+            nextTextField.becomeFirstResponder()
+            registerPasswordTextField.addTarget(self, action: #selector(tttextFieldDidEndOnExit), for: .editingDidEndOnExit)
+        }
+    }
+    func disableRegisterPasswordTextField() {
+        self.showAlert(title: "Atenção", message: "E-mail invalido")
+        registerPasswordTextField.isEnabled = false
+    }
+    
+    @objc func tttextFieldDidEndOnExit(){
+        if self.registerPasswordTextField.validatePassword(){
+            self.registerButton.isEnabled = true
+            
+        } else {
+            self.registerButton.isEnabled = false
+            self.showAlert(title: "Atenção", message: "Insira a senha com no mínimo 6 caracteres")
+        }
+    }
+ 
     func configElements() {
-        
         newAccountLabel.text = "Nova Conta"
         newAccountLabel.textColor = UIColor.black
         
         nameTextField.placeholder = "Digite seu nome"
         nameTextField.delegate = self
-        
+        nameTextField.delegate = self
+        nameTextField.keyboardType = .namePhonePad
+        nameTextField.tag = 1
+      
         registerEmailTextField.placeholder = "Digite seu email"
         registerEmailTextField.keyboardType = .emailAddress
         registerEmailTextField.delegate = self
+        registerEmailTextField.isEnabled = false
+        registerEmailTextField.tag = 2
         
         registerPasswordTextField.placeholder = "Digite uma senha"
         registerPasswordTextField.delegate = self
         registerPasswordTextField.isSecureTextEntry = true
+        registerPasswordTextField.isEnabled = false
+        registerPasswordTextField.tag = 3
+        registerPasswordTextField.textContentType = .oneTimeCode
         
         repeatPasswordTextField.placeholder = "Repita a senha"
         repeatPasswordTextField.delegate = self
         repeatPasswordTextField.isSecureTextEntry = true
+        repeatPasswordTextField.isEnabled = false
+        repeatPasswordTextField.tag = 4
+        repeatPasswordTextField.textContentType = .none
         
         registerButton.setTitle("Cadastrar", for: .normal)
         registerButton.tintColor = UIColor.black
+        registerButton.isEnabled = false
         
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 1.0
-        textField.layer.borderColor = UIColor.orange.cgColor
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.layer.borderWidth = 0
-        textField.layer.borderColor = UIColor.gray.cgColor
     }
     
     func showAlert(title:String, message: String) {
@@ -111,23 +156,38 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     func redirectForLogin(){
-        if let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC {
-            self.navigationController?.pushViewController(loginVC, animated: true)
-        }
+        self.navigationController?.pushViewController(TabBarController(), animated: true)
     }
 }
 
 extension UITextField {
-    
     func validateEmail() -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
         return validateRegex.evaluate (with: self.text)
     }
-    func validadePassword() -> Bool {
+    func validatePassword() -> Bool {
         let passwordRegex = ".{6,}"
         let validateRegex = NSPredicate (format: "SELF MATCHES %@", passwordRegex)
         return validateRegex.evaluate(with: self.text)
         
     }
+    func validateName() -> Bool {
+        let passwordRegex = "^[a-zA-Z]{2,}$"
+        let validateRegex = NSPredicate (format: "SELF MATCHES %@", passwordRegex)
+        return validateRegex.evaluate(with: self.text)
+    }
+}
+
+extension RegisterVC: UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.orange.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.layer.borderWidth = 0
+        textField.layer.borderColor = UIColor.gray.cgColor
+    }
+    
 }

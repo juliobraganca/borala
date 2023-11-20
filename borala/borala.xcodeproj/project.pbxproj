@@ -39,6 +39,7 @@
 		36E84EBA2AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EB92AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		36E84EBC2AF07EFD00C42AE0 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EBB2AF07EFD00C42AE0 /* FirebaseAppCheck */; };
 		36E84EBF2AF07F2600C42AE0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EBE2AF07F2600C42AE0 /* FirebaseAuth */; };
+		A0B260092B0A41E2004EECDC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0B260082B0A41E2004EECDC /* IQKeyboardManagerSwift */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
 		D6ED3B8B2ACF2AAF00748F55 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */; };
@@ -100,6 +101,7 @@
 				36E84EB42AF07EFD00C42AE0 /* FirebaseAnalytics in Frameworks */,
 				365D13CA2AF08C920004940B /* GoogleSignInSwift in Frameworks */,
 				365D14052AF09A240004940B /* FacebookLogin in Frameworks */,
+				A0B260092B0A41E2004EECDC /* IQKeyboardManagerSwift in Frameworks */,
 				36E84EB62AF07EFD00C42AE0 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				36E84EBC2AF07EFD00C42AE0 /* FirebaseAppCheck in Frameworks */,
 				36E84EBA2AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -324,6 +326,7 @@
 				365D13C72AF08C920004940B /* GoogleSignIn */,
 				365D13C92AF08C920004940B /* GoogleSignInSwift */,
 				365D14042AF09A240004940B /* FacebookLogin */,
+				A0B260082B0A41E2004EECDC /* IQKeyboardManagerSwift */,
 			);
 			productName = borala;
 			productReference = 367458B82A965AB9008E77D8 /* borala.app */;
@@ -337,7 +340,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					367458B72A965AB9008E77D8 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -357,6 +360,7 @@
 				36E84EB22AF07EFD00C42AE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				365D13C62AF08C920004940B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				365D13FB2AF09A240004940B /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				A0B260072B0A41E2004EECDC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 367458B92A965AB9008E77D8 /* Products */;
 			projectDirPath = "";
@@ -399,7 +403,6 @@
 				369824602ACF11F500AD0ABC /* CitiesCollectionViewCell.swift in Sources */,
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
 				3698245E2ACF11BB00AD0ABC /* AddCityViewController.swift in Sources */,
-				367458C02A965AB9008E77D8 /* LoginVC.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
 				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
@@ -477,6 +480,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -538,6 +542,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -565,7 +570,7 @@
 				CODE_SIGN_ENTITLEMENTS = borala/borala.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NMYZ767V32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = borala/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -598,7 +603,7 @@
 				CODE_SIGN_ENTITLEMENTS = borala/borala.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NMYZ767V32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = borala/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -671,6 +676,14 @@
 				minimumVersion = 10.17.0;
 			};
 		};
+		A0B260072B0A41E2004EECDC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -718,6 +731,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36E84EB22AF07EFD00C42AE0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		A0B260082B0A41E2004EECDC /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0B260072B0A41E2004EECDC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
