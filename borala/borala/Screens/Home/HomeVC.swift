@@ -7,9 +7,10 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UITextFieldDelegate {
     
-    
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPlanButton: UIButton!
     
@@ -28,8 +29,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureVC()
-//        configureTabBar()
+        configureTextField()
         configureCollectionView()
         configureButton()
     }
@@ -52,11 +52,17 @@ class HomeVC: UIViewController {
         }
     }
     
+    func configureTextField() {
+        
+        searchTextField.placeholder = "Buscar destino..."
+        searchTextField.delegate = self
+    }
     
     func configureButton() {
         addPlanButton.setupButton(title: "Adicionar Roteiro", isEnabled: true)
+        searchButton.setupButton(title: "Buscar", isEnabled: true)
     }
-    
+
     
     @IBAction func tappedAddPlanButton(_ sender: Any) {
         let addCity = UIStoryboard(name: "AddCityViewController", bundle: nil).instantiateViewController(withIdentifier: "AddCityViewController") as? AddCityViewController
