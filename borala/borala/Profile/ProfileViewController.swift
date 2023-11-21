@@ -10,7 +10,8 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     
-    @IBOutlet weak var imageProfileImageView: UIImageView!
+    
+    @IBOutlet weak var imageProfileButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -22,44 +23,58 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var cityTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var editProfileButton: UIButton!
     
-    @IBOutlet weak var editImageProfileButton: UIButton!
     
+    var profileImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configElementsBackground()
+//        configElementsBackgroundimage()
         configElementsTextfield()
         configElementsButtons()
         configElementsImageProfile()
-       
-        
+        notEditableFields()
+        saveButton.isHidden = true
     }
     
-    @IBAction func tappedEditProfileButton(_ sender: UIButton) {
-        print("Edit profile")
+    @IBAction func tappedEditProfileButton(_ sender: Any) {
+        let ac = UIAlertController(title: nil, message: "Você pode editar os campos", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+        editableFields()
+        saveButton.isHidden = false
+        editProfileButton.isHidden = true
     }
     
     
-    @IBAction func tappedSaveButton(_ sender: UIButton) {
-        print("Salvando")
+    @IBAction func tappedSaveButton(_ sender: Any) {
+        let ac = UIAlertController(title: nil, message: "Informações salvas!", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+        notEditableFields()
+        editProfileButton.isHidden = false
+        saveButton.isHidden = true
     }
     
-    @IBAction func tappedEditImageProfileButton(_ sender: UIButton) {
-
+    @IBAction func tappedImageProfileButton(_ sender: Any) {
         let imageProfilePicker = UIImagePickerController()
         imageProfilePicker.delegate = self
-        //imageProfilePicker.sourceType = .camera // captura imagens através da camera.
+        imageProfilePicker.sourceType = .camera // captura imagens através da camera.
         imageProfilePicker.sourceType = .photoLibrary // direcionando a origem das imagens: galeria.
         imageProfilePicker.allowsEditing = true // permite a edição da foto.
         present(imageProfilePicker, animated: true) //permissão para acessar galeria.
         print("Captura foto")
     }
+    
+    @IBAction func tappedLogoutButton(_ sender: Any) {
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+        navigationController?.pushViewController(loginVC ?? UIViewController(), animated: true)
+    }
+    
     
 //    func configElementsBackground(){
 //        backgroundImageView.image = UIImage(named: "background")
@@ -74,7 +89,6 @@ class ProfileViewController: UIViewController {
         dateOfVBirthTextField.delegate = self
         countryTextField.delegate = self
         cityTextField.delegate = self
-        passwordTextField.delegate = self
         
         //Configurando Teclados
         nameTextField.keyboardType = .namePhonePad
@@ -82,7 +96,6 @@ class ProfileViewController: UIViewController {
         dateOfVBirthTextField.keyboardType = .numberPad
         countryTextField.keyboardType = .namePhonePad
         cityTextField.keyboardType = .namePhonePad
-        passwordTextField.keyboardType = .namePhonePad
         
         //Placeholder
         nameTextField.placeholder = "Digite seu nome"
@@ -90,7 +103,6 @@ class ProfileViewController: UIViewController {
         dateOfVBirthTextField.placeholder = "DD/MM/AAAA"
         countryTextField.placeholder = "Digite o pais onde mora"
         cityTextField.placeholder = "Digita cidade onde mora"
-        passwordTextField.placeholder = "Trocar senha"
     }
     
     func configElementsButtons(){
@@ -115,23 +127,36 @@ class ProfileViewController: UIViewController {
         
         saveButton.setupButton(title: "Salvar", isEnabled: true)
         editProfileButton.setupButton(title: "Editar Perfil", isEnabled: true)
-        
             }
     
     
     func configElementsImageProfile(){
-        imageProfileImageView.image = UIImage(systemName: "person.circle.fill")
-        imageProfileImageView.contentMode = .scaleAspectFit
-        imageProfileImageView.layer.borderColor = UIColor.orange.cgColor
-        imageProfileImageView.layer.borderWidth = 1
-        imageProfileImageView.layer.cornerRadius = imageProfileImageView.frame.size.width / 2
-        imageProfileImageView.clipsToBounds = true
+        imageProfileButton.setImage(UIImage(systemName: "person.circle.fill"), for: .normal)
+//        imageProfileButton.contentHorizontalAlignment = .fill
+//        imageProfileButton.contentVerticalAlignment = .fill
+        imageProfileButton.imageView?.contentMode = .scaleAspectFit
+        imageProfileButton.imageView?.tintColor = .black
+//        imageProfileButton.contentMode = .scaleToFill
+        imageProfileButton.layer.cornerRadius = imageProfileButton.frame.size.width / 2
+        imageProfileButton.clipsToBounds = true
     }
     
     
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageProfileImageView.image = info[.originalImage] as? UIImage // utilizando a imgem original
-        dismiss(animated: true)
+    func notEditableFields() {
+        nameTextField.isEnabled = false
+        emailTextField.isEnabled = false
+        dateOfVBirthTextField.isEnabled = false
+        countryTextField.isEnabled = false
+        cityTextField.isEnabled = false
+    }
+    
+    
+    func editableFields() {
+        nameTextField.isEnabled = true
+        emailTextField.isEnabled = true
+        dateOfVBirthTextField.isEnabled = true
+        countryTextField.isEnabled = true
+        cityTextField.isEnabled = true
     }
 }
 extension ProfileViewController: UITextFieldDelegate {
@@ -156,9 +181,17 @@ extension ProfileViewController: UITextFieldDelegate {
 
 
 
-    extension  UIViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    extension  ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-     
+        public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            guard let image = info[.editedImage] as? UIImage else { return }
+            dismiss(animated: true)
+            
+            imageProfileButton.setImage(image, for: .normal)
+//            imageProfileButton.contentHorizontalAlignment = .fill
+//            imageProfileButton.contentVerticalAlignment = .fill
+//            imageProfileButton.imageView?.contentMode = .scaleAspectFit
+        }
      
 }
 
