@@ -5,6 +5,31 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+<<<<<<< HEAD
+=======
+			<key>CFBundleURLTypes</key>
+			<array>
+				<dict>
+					<key>CFBundleURLSchemes</key>
+					<array>
+						<string>fb1341594086458687</string>
+					</array>
+				</dict>
+			</array>
+			<key>FacebookAppID</key>
+			<string>1341594086458687</string>
+			<key>FacebookClientToken</key>
+			<string>83017107f1c6099c499da41e188fbc5a</string>
+			<key>FacebookDisplayName</key>
+			<string>Borala</string>
+			<key>LSApplicationQueriesSchemes</key>
+			<array>
+				<string>fbapi</string>
+				<string>fb-messenger-share-api</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+>>>>>>> Feature/Budget
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1104101324291707</string>
@@ -32,7 +57,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>BudgetViewController</string>
 				</dict>
 			</array>
 		</dict>

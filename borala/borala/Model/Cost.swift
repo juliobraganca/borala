@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct Cost{
+struct Cost {
     
     var description: String
-    var value: String
+    var value: Double
     var check: Bool
-    
 }
