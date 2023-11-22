@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 import Firebase
 
 
@@ -21,9 +20,9 @@ class RegisterVC: UIViewController {
     
     @IBOutlet weak var registerPasswordTextField: UITextField!
     
-    @IBOutlet weak var repeatPasswordTextField: UITextField!
-    
     @IBOutlet weak var registerButton: UIButton!
+    
+    @IBOutlet weak var returnButton: UIButton!
     
     var auth: Auth?
     
@@ -47,6 +46,13 @@ class RegisterVC: UIViewController {
         })
         
     }
+    
+    
+    @IBAction func tappedReturnButton(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: false)
+    }
+    
     func checkTextFields() {
         nameTextField.addTarget(self, action: #selector(textFieldDidEndOnExit), for: .editingDidEndOnExit)
     }
@@ -70,8 +76,7 @@ class RegisterVC: UIViewController {
     func disableRegisterEmailTextfield(){
         registerEmailTextField.isEnabled = false
     }
-    
-    
+
     @objc func ttextFieldDidEndOnExit() {
         if !registerEmailTextField.validateEmail() {
             disableRegisterPasswordTextField()
@@ -104,7 +109,12 @@ class RegisterVC: UIViewController {
     }
  
     func configElements() {
-        newAccountLabel.text = "Nova Conta"
+        
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
+        view.backgroundColor = .systemGray5
+                                             
+        newAccountLabel.text = "Criar conta"
         newAccountLabel.textColor = UIColor.black
         
         nameTextField.placeholder = "Digite seu nome"
@@ -126,16 +136,10 @@ class RegisterVC: UIViewController {
         registerPasswordTextField.tag = 3
         registerPasswordTextField.textContentType = .oneTimeCode
         
-        repeatPasswordTextField.placeholder = "Repita a senha"
-        repeatPasswordTextField.delegate = self
-        repeatPasswordTextField.isSecureTextEntry = true
-        repeatPasswordTextField.isEnabled = false
-        repeatPasswordTextField.tag = 4
-        repeatPasswordTextField.textContentType = .none
-        
         registerButton.setTitle("Cadastrar", for: .normal)
+        registerButton.setTitleColor(UIColor.systemGray5, for: .normal)
         registerButton.tintColor = UIColor.black
-        registerButton.isEnabled = false
+        registerButton.isEnabled = true
         
     }
     
