@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
+import Firebase
 import GoogleSignIn
 import FacebookCore
 import IQKeyboardManagerSwift

@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseCore
+import Firebase
 import GoogleSignIn
 import FacebookLogin
 
@@ -64,26 +63,19 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func tappedGoogleButton(_ sender: Any) {
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        
-        // Create Google Sign In configuration object.
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
-        
-        // Start the sign in flow!
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
             guard error == nil else {
                 return
             }
-            
             guard let user = result?.user,
                   let idToken = user.idToken?.tokenString
             else {
                 return
             }
-            
             _ = GoogleAuthProvider.credential(withIDToken: idToken,
                                               accessToken: user.accessToken.tokenString)
-            
             self.navigationController?.pushViewController(TabBarController(), animated: true)
         }
     }
@@ -135,7 +127,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-
     func signIn(){
         let email:String = self.emailTextField.text ?? ""
         let password: String = self.passwordTextField.text ?? ""
@@ -152,7 +143,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 }
 
 extension LoginVC: LoginButtonDelegate {
-    
+   
 func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
     if error != nil {
                showAllert(title: "Atencão", message: "Erro ao logar com facebook")
@@ -165,5 +156,8 @@ func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginMana
             }
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        
     }
+    
+    
 }
