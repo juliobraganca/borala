@@ -32,6 +32,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         configElements()
         self.auth = Auth.auth()
         checkLogin()
+        checkLoginFirebase()
         self.tabBarController?.tabBar.isHidden = true
     }
     
@@ -127,6 +128,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func checkLoginFirebase(){
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if let user = user {
+                self.navigationController?.pushViewController(TabBarController(), animated: false)
+                self.navigationController?.navigationBar.isHidden = true
+            } else {
+                
+            }
+        }
+        
+    }
+    
     func signIn(){
         let email:String = self.emailTextField.text ?? ""
         let password: String = self.passwordTextField.text ?? ""
@@ -143,17 +156,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
 }
 
 extension LoginVC: LoginButtonDelegate {
-   
-func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-    if error != nil {
-               showAllert(title: "Atencão", message: "Erro ao logar com facebook")
-        
-            } else if result?.isCancelled == true {
-                showAllert(title: "Atencão", message: "Você cancelou o acesso pelo facebook")
-                
-            } else {
-                self.navigationController?.pushViewController(TabBarController(), animated: true)
-            }
+    
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if error != nil {
+            showAllert(title: "Atencão", message: "Erro ao logar com facebook")
+            
+        } else if result?.isCancelled == true {
+            showAllert(title: "Atencão", message: "Você cancelou o acesso pelo facebook")
+            
+        } else {
+            self.navigationController?.pushViewController(TabBarController(), animated: true)
+        }
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
         
