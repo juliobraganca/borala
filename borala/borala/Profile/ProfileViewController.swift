@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Firebase
+import FacebookLogin
 
 class ProfileViewController: UIViewController {
     
-    
-    
+        
     @IBOutlet weak var imageProfileButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,14 +31,15 @@ class ProfileViewController: UIViewController {
     
     
     var profileImage: UIImage!
+    var auth: Auth?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configElementsBackgroundimage()
         configElementsTextfield()
         configElementsButtons()
         configElementsImageProfile()
         notEditableFields()
+        self.auth = Auth.auth()
         saveButton.isHidden = true
     }
     
@@ -71,15 +73,11 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedLogoutButton(_ sender: Any) {
+        logoutFromFirebase()
+        logoutFromFacebook()
         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
         navigationController?.pushViewController(loginVC ?? UIViewController(), animated: true)
     }
-    
-    
-//    func configElementsBackground(){
-//        backgroundImageView.image = UIImage(named: "background")
-//        backgroundImageView.contentMode = .scaleAspectFill
-//    }
     
     func configElementsTextfield(){
         
@@ -107,36 +105,36 @@ class ProfileViewController: UIViewController {
     
     func configElementsButtons(){
         
-//        saveButton.setTitle("Salvar", for: .normal)
-//        saveButton.backgroundColor = UIColor.orange
-//        //saveButton.layer.borderColor = UIColor.lightGray.cgColor
-//        saveButton.layer.borderWidth = 1
-//        saveButton.setTitleColor(UIColor.white, for: .normal)
-//        saveButton.titleLabel?.font = UIFont(name: "Helvetica", size: 10)
-//        saveButton.layer.cornerRadius = saveButton.frame.size.width / 8
-//        saveButton.clipsToBounds = true
+        //        saveButton.setTitle("Salvar", for: .normal)
+        //        saveButton.backgroundColor = UIColor.orange
+        //        //saveButton.layer.borderColor = UIColor.lightGray.cgColor
+        //        saveButton.layer.borderWidth = 1
+        //        saveButton.setTitleColor(UIColor.white, for: .normal)
+        //        saveButton.titleLabel?.font = UIFont(name: "Helvetica", size: 10)
+        //        saveButton.layer.cornerRadius = saveButton.frame.size.width / 8
+        //        saveButton.clipsToBounds = true
         
-//        editProfileButton.setTitle("Edit. Perfil", for: .normal)
-//        editProfileButton.backgroundColor = UIColor.orange
-//        //editProfileButton.layer.borderColor = UIColor.lightGray.cgColor
-//        editProfileButton.layer.borderWidth = 1
-//        editProfileButton.setTitleColor(UIColor.white, for: .normal)
-//        editProfileButton.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
-//        editProfileButton.layer.cornerRadius = editProfileButton.frame.size.width / 8
-//        editProfileButton.clipsToBounds = true
+        //        editProfileButton.setTitle("Edit. Perfil", for: .normal)
+        //        editProfileButton.backgroundColor = UIColor.orange
+        //        //editProfileButton.layer.borderColor = UIColor.lightGray.cgColor
+        //        editProfileButton.layer.borderWidth = 1
+        //        editProfileButton.setTitleColor(UIColor.white, for: .normal)
+        //        editProfileButton.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+        //        editProfileButton.layer.cornerRadius = editProfileButton.frame.size.width / 8
+        //        editProfileButton.clipsToBounds = true
         
         saveButton.setupButton(title: "Salvar", isEnabled: true)
         editProfileButton.setupButton(title: "Editar Perfil", isEnabled: true)
-            }
+    }
     
     
     func configElementsImageProfile(){
         imageProfileButton.setImage(UIImage(systemName: "person.circle.fill"), for: .normal)
-//        imageProfileButton.contentHorizontalAlignment = .fill
-//        imageProfileButton.contentVerticalAlignment = .fill
+        //        imageProfileButton.contentHorizontalAlignment = .fill
+        //        imageProfileButton.contentVerticalAlignment = .fill
         imageProfileButton.imageView?.contentMode = .scaleAspectFit
         imageProfileButton.imageView?.tintColor = .black
-//        imageProfileButton.contentMode = .scaleToFill
+        //        imageProfileButton.contentMode = .scaleToFill
         imageProfileButton.layer.cornerRadius = imageProfileButton.frame.size.width / 2
         imageProfileButton.clipsToBounds = true
     }
@@ -158,7 +156,23 @@ class ProfileViewController: UIViewController {
         countryTextField.isEnabled = true
         cityTextField.isEnabled = true
     }
+    
+    func logoutFromFacebook() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+    }
+    
+    func logoutFromFirebase(){
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+
+    }
 }
+
 extension ProfileViewController: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -174,11 +188,10 @@ extension ProfileViewController: UITextFieldDelegate {
    
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("textFieldShouldReturn")
-        textField.resignFirstResponder() //utilizado para esconder o teclado.
+        textField.resignFirstResponder()
         return true
     }
 }
-
 
 
     extension  ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
