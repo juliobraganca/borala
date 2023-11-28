@@ -8,10 +8,12 @@
 import UIKit
 import Firebase
 import FacebookLogin
+import FirebaseFirestore
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
-        
+    
     @IBOutlet weak var imageProfileButton: UIButton!
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -24,7 +26,6 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var cityTextField: UITextField!
     
-    
     @IBOutlet weak var saveButton: UIButton!
     
     @IBOutlet weak var editProfileButton: UIButton!
@@ -32,6 +33,8 @@ class ProfileViewController: UIViewController {
     
     var profileImage: UIImage!
     var auth: Auth?
+    let db = Firestore.firestore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,7 @@ class ProfileViewController: UIViewController {
         notEditableFields()
         self.auth = Auth.auth()
         saveButton.isHidden = true
+        fatchUserIDForProfile()
     }
     
     @IBAction func tappedEditProfileButton(_ sender: Any) {
@@ -52,8 +56,8 @@ class ProfileViewController: UIViewController {
         editProfileButton.isHidden = true
     }
     
-    
     @IBAction func tappedSaveButton(_ sender: Any) {
+        updateUserData()
         let ac = UIAlertController(title: nil, message: "Informações salvas!", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
@@ -65,7 +69,7 @@ class ProfileViewController: UIViewController {
     @IBAction func tappedImageProfileButton(_ sender: Any) {
         let imageProfilePicker = UIImagePickerController()
         imageProfilePicker.delegate = self
-        imageProfilePicker.sourceType = .camera // captura imagens através da camera.
+        //  imageProfilePicker.sourceType = .camera // captura imagens através da camera.
         imageProfilePicker.sourceType = .photoLibrary // direcionando a origem das imagens: galeria.
         imageProfilePicker.allowsEditing = true // permite a edição da foto.
         present(imageProfilePicker, animated: true) //permissão para acessar galeria.
@@ -165,11 +169,58 @@ class ProfileViewController: UIViewController {
     func logoutFromFirebase(){
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
-
+        
+    }
+    //MARK: - Verificando Firestore e atualizando os TextFields
+    func fatchUserIDForProfile(){
+        if let currentUser = Auth.auth().currentUser {
+            let db = Firestore.firestore()
+            let userID = currentUser.uid
+            let userRef = db.collection("users").document(userID)
+            
+            userRef.getDocument { document, error in
+                if let document = document, document.exists {
+                    let userData = document.data()
+                    
+                    DispatchQueue.main.async { [weak self] in
+                        self?.nameTextField.text = userData?["name"] as? String
+                        self?.emailTextField.text = userData?["email"] as? String
+                        self?.dateOfVBirthTextField.text = userData?["date"] as? String
+                        self?.countryTextField.text = userData?["country"] as? String
+                        self?.cityTextField.text = userData?["city"] as? String
+                    }
+                } else {
+                    print("Document does not exist")
+                }
+            }
+        }
+    }
+    
+    func updateUserData(){
+        //var ref: DocumentReference? = nil
+        let name: String = self.nameTextField.text ?? ""
+        let email: String = self.emailTextField.text ?? ""
+        let date: String = self.dateOfVBirthTextField.text ?? ""
+        let country: String = self.countryTextField.text ?? ""
+        let city: String = self.cityTextField.text ?? ""
+        let userID = Auth.auth().currentUser?.uid
+        db.collection("users").document(userID ?? "").setData( [
+            "name": name,
+            "email": email,
+            "date": date,
+            "country": country,
+            "city": city
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(String(describing: userID))")
+            }
+        }
     }
 }
 
