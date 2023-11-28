@@ -10,6 +10,8 @@ import Firebase
 import GoogleSignIn
 import FacebookLogin
 
+
+
 class LoginVC: UIViewController, UITextFieldDelegate {
     
     
@@ -27,13 +29,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     let facebookLoginButton = FBLoginButton(frame: .zero)
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configElements()
         self.auth = Auth.auth()
         checkLogin()
-        checkLoginFirebase()
         self.tabBarController?.tabBar.isHidden = true
+      
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,26 +124,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.present(alertErroLogin, animated: true, completion: nil)
     }
     func checkLogin() {
-        if AccessToken.current != nil {
+        if AccessToken.current != nil || Auth.auth().currentUser != nil{
             self.navigationController?.pushViewController(TabBarController(), animated: false)
             self.navigationController?.navigationBar.isHidden = true
         } else {
-            facebookLoginButton.isHidden = true
+            
         }
     }
-    
-    func checkLoginFirebase(){
-        Auth.auth().addStateDidChangeListener { auth, user in
-            if let user = user {
-                self.navigationController?.pushViewController(TabBarController(), animated: false)
-                self.navigationController?.navigationBar.isHidden = true
-            } else {
-                
-            }
-        }
-        
-    }
-    
     func signIn(){
         let email:String = self.emailTextField.text ?? ""
         let password: String = self.passwordTextField.text ?? ""
