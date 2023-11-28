@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 
 
@@ -25,6 +26,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var returnButton: UIButton!
     
     var auth: Auth?
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class RegisterVC: UIViewController {
             if error != nil {
                 self.showAlert(title: "Atenção", message: "Erro ao cadastrar. Verifique seus dados")
             } else{
+                self.addUserData()
                 self.ShowAlertReturnLogin(title:"Parabéns", message: "Registro realizado com sucesso!")
                 
             }
@@ -162,6 +165,27 @@ class RegisterVC: UIViewController {
     func redirectForLogin(){
         self.navigationController?.pushViewController(TabBarController(), animated: true)
     }
+   
+    //MARK: - Adicicionado informações no banco de dados
+    func addUserData(){
+        //var ref: DocumentReference? = nil
+        let name: String = self.nameTextField.text ?? ""
+        let email: String = self.registerEmailTextField.text ?? ""
+        let password: String = self.registerPasswordTextField.text ?? ""
+        let userID = Auth.auth().currentUser?.uid
+        db.collection("users").document(userID ?? "").setData( [
+          "name": name,
+          "email": email,
+          "password": password
+        ]) { err in
+          if let err = err {
+            print("Error adding document: \(err)")
+          } else {
+              print("Document added with ID: \(String(describing: userID))")
+          }
+        }
+    }
+    
 }
 
 extension UITextField {
