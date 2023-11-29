@@ -28,7 +28,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     var auth: Auth?
     let facebookLoginButton = FBLoginButton(frame: .zero)
     
-    
+    var alert: Alert?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         self.auth = Auth.auth()
         checkLogin()
         self.tabBarController?.tabBar.isHidden = true
+        self.alert = Alert(controller: self)
       
       
     }
@@ -137,7 +138,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         self.auth?.signIn(withEmail: email, password: password) { (usuario, error) in
             if error != nil {
-                self.showAllert(title: "Atenção", message: "Verifique os dados inseridos e tente novamente!")
+                self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.errorMessage.rawValue)
             }else{
                 self.navigationController?.pushViewController(TabBarController(), animated: true)
             }

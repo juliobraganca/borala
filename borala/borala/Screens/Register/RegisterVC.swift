@@ -28,9 +28,12 @@ class RegisterVC: UIViewController {
     var auth: Auth?
     let db = Firestore.firestore()
     
+    var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.auth = Auth.auth()
+        self.alert = Alert(controller: self)
         configElements()
         checkTextFields()
     }
@@ -40,10 +43,10 @@ class RegisterVC: UIViewController {
         let password: String = self.registerPasswordTextField.text ?? ""
         auth?.createUser(withEmail:email, password: password, completion: { (Result, error) in
             if error != nil {
-                self.showAlert(title: "Atenção", message: "Erro ao cadastrar. Verifique seus dados")
+                self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.errorRegister.rawValue)
             } else{
                 self.addUserData()
-                self.ShowAlertReturnLogin(title:"Parabéns", message: "Registro realizado com sucesso!")
+                self.alert?.getAlert(title: AlertStrings.congratulations.rawValue, message: AlertStrings.sucessRegister.rawValue)
                 
             }
         })
@@ -65,7 +68,7 @@ class RegisterVC: UIViewController {
         }
         else {
             disableRegisterEmailTextfield()
-            self.showAlert(title: "Atenção", message: "Inserir um nome com no mínimo 2 caractéries")
+            self.alert?.getAlert(title: AlertStrings.atention.rawValue, message: AlertStrings.characters.rawValue)
         }
     }
     func enableRegisterEmailTextField(){

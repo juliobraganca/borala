@@ -41,6 +41,7 @@
 		36E84EBF2AF07F2600C42AE0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EBE2AF07F2600C42AE0 /* FirebaseAuth */; };
 		A0B260092B0A41E2004EECDC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0B260082B0A41E2004EECDC /* IQKeyboardManagerSwift */; };
 		A0E353712B14B6720034A547 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A0E353702B14B6720034A547 /* FirebaseFirestore */; };
+		D61645F12B1696B700A38954 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61645F02B1696B700A38954 /* Alert.swift */; };
 		D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */; };
 		D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63023982ABBCC13001092C1 /* RegisterVC.swift */; };
 		D6ED3B8B2ACF2AAF00748F55 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */; };
@@ -80,6 +81,7 @@
 		3698245F2ACF11F500AD0ABC /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		36A51FA02ACF07E300A63521 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsVC.storyboard; sourceTree = "<group>"; };
+		D61645F02B1696B700A38954 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		D6ED3B8A2ACF2AAF00748F55 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		367458BA2A965AB9008E77D8 /* borala */ = {
 			isa = PBXGroup;
 			children = (
+				D61645EF2B16967700A38954 /* Alert */,
 				365D13DC2AF097870004940B /* borala.entitlements */,
 				363EBA672ABCEE5E004AF499 /* Model */,
 				363EBA4C2ABC7AE5004AF499 /* Extensions */,
@@ -252,6 +255,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D61645EF2B16967700A38954 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D61645F02B1696B700A38954 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		D63023942ABBC3B0001092C1 /* Login */ = {
@@ -408,6 +419,7 @@
 				3698245E2ACF11BB00AD0ABC /* AddCityViewController.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
 				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,
+				D61645F12B1696B700A38954 /* Alert.swift in Sources */,
 				363EBA552ABC80F7004AF499 /* UIButton+Ext.swift in Sources */,
 				363EBA4E2ABC7B23004AF499 /* UIView+Ext.swift in Sources */,
 				D921875A2ACE484D00C66A2B /* BudgetViewController.swift in Sources */,
