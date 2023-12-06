@@ -6,34 +6,24 @@
 //
 
 import UIKit
-import MapKit
+import GoogleMaps
 
 class MapsVC: UIViewController {
-    
-    let mapView = MKMapView()
-    let coordinate = CLLocationCoordinate2D(latitude: -22.988495, longitude: -43.192742)
-    
+
+    var marker = GMSMarker()
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureMap()
+      
     }
+    override func loadView() {
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 10.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+    }
+  
 }
 
-extension MapsVC {
-    private func configureMap() {
-        view.addSubview(mapView)
-        mapView.frame = view.bounds
-        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        mapView.setRegion(region, animated: true)
-        
-        addPin()
-    }
-    
-    private func addPin() {
-        let pin = MKPointAnnotation()
-        pin.coordinate = coordinate
-        pin.title = "Here you are"
-        mapView.addAnnotations([pin])
-    }
-}
