@@ -11,6 +11,9 @@ import GoogleSignIn
 import FacebookCore
 import IQKeyboardManagerSwift
 import FirebaseFirestore
+import GoogleMaps
+import GooglePlaces
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
+        GMSServices.provideAPIKey("AIzaSyBb2QYxZuy4lVdmIhg0Ct6ynl2DxUMu7-0")
+        GMSPlacesClient.provideAPIKey("AIzaSyBb2QYxZuy4lVdmIhg0Ct6ynl2DxUMu7-0")
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "OK"

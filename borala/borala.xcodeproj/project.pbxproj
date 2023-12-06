@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24E0DD0C132A82F28CA4C00A /* Pods_borala.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553F10AB4CA14D44DCDA65E /* Pods_borala.framework */; };
 		363EBA452ABC7906004AF499 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA442ABC7906004AF499 /* ForgotPasswordVC.swift */; };
 		363EBA472ABC7917004AF499 /* ForgotPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363EBA462ABC7917004AF499 /* ForgotPasswordVC.storyboard */; };
 		363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363EBA482ABC7A3A004AF499 /* HomeVC.swift */; };
@@ -39,6 +40,8 @@
 		36E84EBA2AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EB92AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		36E84EBC2AF07EFD00C42AE0 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EBB2AF07EFD00C42AE0 /* FirebaseAppCheck */; };
 		36E84EBF2AF07F2600C42AE0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36E84EBE2AF07F2600C42AE0 /* FirebaseAuth */; };
+		A0B1CBED2B1E3CA400CA446D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1CBEC2B1E3CA400CA446D /* SearchViewController.swift */; };
+		A0B1CBF02B1E3CF900CA446D /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B1CBEF2B1E3CF900CA446D /* Search.storyboard */; };
 		A0B260092B0A41E2004EECDC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0B260082B0A41E2004EECDC /* IQKeyboardManagerSwift */; };
 		A0E353712B14B6720034A547 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A0E353702B14B6720034A547 /* FirebaseFirestore */; };
 		D61645F12B1696B700A38954 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61645F02B1696B700A38954 /* Alert.swift */; };
@@ -81,6 +84,12 @@
 		3698245F2ACF11F500AD0ABC /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		36A51FA02ACF07E300A63521 /* MapsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsVC.swift; sourceTree = "<group>"; };
 		36A51FA22ACF07FB00A63521 /* MapsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapsVC.storyboard; sourceTree = "<group>"; };
+		3CA9053F49712B5A7A41227F /* Pods-borala.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-borala.release.xcconfig"; path = "Target Support Files/Pods-borala/Pods-borala.release.xcconfig"; sourceTree = "<group>"; };
+		5553F10AB4CA14D44DCDA65E /* Pods_borala.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_borala.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5010FD0404807CDB99FEC4 /* Pods-borala.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-borala.debug.xcconfig"; path = "Target Support Files/Pods-borala/Pods-borala.debug.xcconfig"; sourceTree = "<group>"; };
+		A0B1CBEC2B1E3CA400CA446D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A0B1CBEF2B1E3CF900CA446D /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		A0B87DFB2B1B572A00B1F7FF /* borala copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "borala copy-Info.plist"; path = "/Users/eduardo/borala/borala/borala copy-Info.plist"; sourceTree = "<absolute>"; };
 		D61645F02B1696B700A38954 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D63023962ABBCBE6001092C1 /* RegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterVC.storyboard; sourceTree = "<group>"; };
 		D63023982ABBCC13001092C1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 				36E84EBA2AF07EFD00C42AE0 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A0E353712B14B6720034A547 /* FirebaseFirestore in Frameworks */,
 				365D13C82AF08C920004940B /* GoogleSignIn in Frameworks */,
+				24E0DD0C132A82F28CA4C00A /* Pods_borala.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +134,7 @@
 				D63023942ABBC3B0001092C1 /* Login */,
 				D63023952ABBC3CC001092C1 /* Register */,
 				363EBA432ABC78DF004AF499 /* ForgotPassword */,
+				A0B1CBEE2B1E3CB100CA446D /* Search */,
 				363EBA422ABC788E004AF499 /* Home */,
 				36A51F9F2ACF07BF00A63521 /* Maps */,
 				D92187562ACE47DC00C66A2B /* Budget */,
@@ -193,6 +204,8 @@
 				367458BA2A965AB9008E77D8 /* borala */,
 				367458B92A965AB9008E77D8 /* Products */,
 				36E84EBD2AF07F2600C42AE0 /* Frameworks */,
+				6B9837D54839F50F5C1D8AEB /* Pods */,
+				A0B87DFB2B1B572A00B1F7FF /* borala copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,8 +266,27 @@
 		36E84EBD2AF07F2600C42AE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5553F10AB4CA14D44DCDA65E /* Pods_borala.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B9837D54839F50F5C1D8AEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D5010FD0404807CDB99FEC4 /* Pods-borala.debug.xcconfig */,
+				3CA9053F49712B5A7A41227F /* Pods-borala.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0B1CBEE2B1E3CB100CA446D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A0B1CBEC2B1E3CA400CA446D /* SearchViewController.swift */,
+				A0B1CBEF2B1E3CF900CA446D /* Search.storyboard */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		D61645EF2B16967700A38954 /* Alert */ = {
@@ -320,9 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 367458CC2A965ABA008E77D8 /* Build configuration list for PBXNativeTarget "borala" */;
 			buildPhases = (
+				D609CB15D7D5BB086B537363 /* [CP] Check Pods Manifest.lock */,
 				367458B42A965AB9008E77D8 /* Sources */,
 				367458B52A965AB9008E77D8 /* Frameworks */,
 				367458B62A965AB9008E77D8 /* Resources */,
+				6FF400D98C6773ADCBD7D4DC /* [CP] Copy Pods Resources */,
+				C597883CCD15D21910485045 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +433,7 @@
 				D63023972ABBCBE6001092C1 /* RegisterVC.storyboard in Resources */,
 				D92187582ACE483700C66A2B /* BudgetViewController.storyboard in Resources */,
 				367458C32A965AB9008E77D8 /* Main.storyboard in Resources */,
+				A0B1CBF02B1E3CF900CA446D /* Search.storyboard in Resources */,
 				363EBA572ABCA9C2004AF499 /* HomeVC.storyboard in Resources */,
 				D92187522ACDDB1B00C66A2B /* ProfileViewController.storyboard in Resources */,
 				D980C0E82ACE5E6E00092AA6 /* ExpensesTableViewCell.xib in Resources */,
@@ -408,6 +444,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6FF400D98C6773ADCBD7D4DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C597883CCD15D21910485045 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-borala/Pods-borala-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D609CB15D7D5BB086B537363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-borala-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		367458B42A965AB9008E77D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -417,6 +512,7 @@
 				369824602ACF11F500AD0ABC /* CitiesCollectionViewCell.swift in Sources */,
 				D63023992ABBCC13001092C1 /* RegisterVC.swift in Sources */,
 				3698245E2ACF11BB00AD0ABC /* AddCityViewController.swift in Sources */,
+				A0B1CBED2B1E3CA400CA446D /* SearchViewController.swift in Sources */,
 				363EBA492ABC7A3A004AF499 /* HomeVC.swift in Sources */,
 				D92187542ACDDB3300C66A2B /* ProfileViewController.swift in Sources */,
 				D61645F12B1696B700A38954 /* Alert.swift in Sources */,
@@ -495,7 +591,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -557,7 +653,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -579,6 +675,7 @@
 		};
 		367458CD2A965ABA008E77D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D5010FD0404807CDB99FEC4 /* Pods-borala.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,6 +709,7 @@
 		};
 		367458CE2A965ABA008E77D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA9053F49712B5A7A41227F /* Pods-borala.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

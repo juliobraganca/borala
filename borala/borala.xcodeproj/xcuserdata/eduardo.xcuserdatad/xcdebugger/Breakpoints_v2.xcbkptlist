@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "tttextFieldDidEndOnExit()"
+            landmarkName = "enableRegisterPasswordTextField()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "tttextFieldDidEndOnExit()"
+            landmarkName = "enableRegisterPasswordTextField()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -48,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "tttextFieldDidEndOnExit()"
+            landmarkName = "enableRegisterPasswordTextField()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -64,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "tttextFieldDidEndOnExit()"
+            landmarkName = "disableRegisterPasswordTextField()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -112,7 +112,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "tttextFieldDidEndOnExit()"
+            landmarkName = "disableRegisterPasswordTextField()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -160,7 +160,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
             endingLineNumber = "88"
-            landmarkName = "enableRegisterPasswordTextField()"
+            landmarkName = "ttextFieldDidEndOnExit()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,8 +192,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
             endingLineNumber = "138"
-            landmarkName = "LoginVC"
-            landmarkType = "3">
+            landmarkName = "signIn()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -241,7 +241,7 @@
             startingLineNumber = "151"
             endingLineNumber = "151"
             landmarkName = "LoginVC"
-            landmarkType = "3">
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
