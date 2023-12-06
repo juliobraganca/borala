@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "93F968E4-7A6F-4E8C-BCE8-C744E5311D84"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4700982-81DF-4663-B32B-65F1F920A4A7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Maps/MapsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F455926B-8A80-49D2-A6DD-93C492B795F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/Servicos/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "getSearchAlamofire(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F4C8E52-05D3-4A87-A380-5B88DB9E499A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/Servicos/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getSearchAlamofire(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6F4C8E52-05D3-4A87-A380-5B88DB9E499A - 666aaf5183bb023d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchService.getSearchAlamofire(completion: (Swift.Result&lt;borala.Search, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Servicos/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6F4C8E52-05D3-4A87-A380-5B88DB9E499A - 7101e20a4b5ba5ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;borala.Search, Alamofire.AFError&gt;) -&gt; () in borala.SearchService.getSearchAlamofire(completion: (Swift.Result&lt;borala.Search, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Servicos/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "6F4C8E52-05D3-4A87-A380-5B88DB9E499A - 4e6f9bd91b15ac13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchService.getSearchAlamofire(completion: (Swift.Result&lt;borala.Prediction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Servicos/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6F4C8E52-05D3-4A87-A380-5B88DB9E499A - cf0b7e1a3673ed36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;borala.Prediction, Alamofire.AFError&gt;) -&gt; () in borala.SearchService.getSearchAlamofire(completion: (Swift.Result&lt;borala.Prediction, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Servicos/SearchService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1B1FC53-D42A-4DBC-A90F-057469AC6C1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/Cell/SearchTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setupCell(data:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E1B1FC53-D42A-4DBC-A90F-057469AC6C1C - 383aaa43a6753967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchTableViewCell.setupCell(data: borala.Search) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Cell/SearchTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "E1B1FC53-D42A-4DBC-A90F-057469AC6C1C - eb4d9cd2fea704fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchTableViewCell.setupCell(data: borala.rResult) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Cell/SearchTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "E1B1FC53-D42A-4DBC-A90F-057469AC6C1C - 49de02dee1705248"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchTableViewCell.setupCell(data: borala.Prediction) -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/Cell/SearchTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2833A5DE-39B4-4237-B7AC-CF5B2F9231F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "SearchViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B030C956-8796-4D29-B73D-F7FB8A3F1317"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "SearchViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96CA8D88-B0CA-4CD0-B9DC-D6E3100438FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SearchViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "96CA8D88-B0CA-4CD0-B9DC-D6E3100438FD - 873457726b344c86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.init() -&gt; borala.SearchViewModel"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "96CA8D88-B0CA-4CD0-B9DC-D6E3100438FD - 873457726b344c86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.init() -&gt; borala.SearchViewModel"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "96CA8D88-B0CA-4CD0-B9DC-D6E3100438FD - 873457726b344c86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.init() -&gt; borala.SearchViewModel"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "96CA8D88-B0CA-4CD0-B9DC-D6E3100438FD - 873457726b344c86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.init() -&gt; borala.SearchViewModel"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7023D294-EAF1-4356-8D92-18B93D0476CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/ViewModel/SearchViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchSearchAlamofire()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7023D294-EAF1-4356-8D92-18B93D0476CD - 9a0a5542800c7002"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.fetchSearchAlamofire() -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "7023D294-EAF1-4356-8D92-18B93D0476CD - 9a0a5542800c7002"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewModel.fetchSearchAlamofire() -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/ViewModel/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3C420E3-ED8A-4CB6-8668-1B8523395395"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/Servicos/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "getSearchAlamofire(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A369C356-7D66-4390-9271-836FCD5A5E3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/Servicos/SearchService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getSearchAlamofire(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB7B7C37-3C51-4EBD-BC86-373FFAE2A3D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "borala/Screens/Search/SearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB7B7C37-3C51-4EBD-BC86-373FFAE2A3D3 - b61106af86dac6d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "640">
+               </Location>
+               <Location
+                  uuid = "EB7B7C37-3C51-4EBD-BC86-373FFAE2A3D3 - b61106af86dac63a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "borala.SearchViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "borala"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eduardo/borala/borala/borala/Screens/Search/SearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "640">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
